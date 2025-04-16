@@ -1,0 +1,136 @@
+/* Base styles and CSS reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Colors */
+  --primary-accent: hsl(75, 94%, 57%);
+  --grey-700: hsl(0, 0%, 20%);
+  --grey-800: hsl(0, 0%, 12%);
+  --grey-900: hsl(0, 0%, 8%);
+  --white: hsl(0, 0%, 100%);
+
+  /* Font sizes */
+  --fs-body: 0.875rem;
+  --fs-heading: 1.5rem;
+
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2.5rem;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: var(--fs-body);
+  font-weight: 400;
+  background: var(--grey-900);
+  color: var(--white);
+  line-height: 1.5;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 1.5rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 384px;
+}
+
+.card {
+  background-color: var(--grey-800);
+  border-radius: 0.75rem;
+  padding: var(--space-lg);
+}
+
+.avatar {
+  text-align: center;
+}
+
+.avatar img {
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.content {
+  margin-top: var(--space-lg);
+}
+
+header {
+  margin-bottom: var(--space-lg);
+  text-align: center;
+}
+
+header h1 {
+  font-size: var(--fs-heading);
+  font-weight: 600;
+  margin-bottom: var(--space-xs);
+}
+
+.profile-location {
+  font-weight: 700;
+  color: var(--primary-accent);
+  margin-bottom: var(--space-lg);
+}
+
+.profile-bio {
+  font-style: italic;
+}
+
+.social-links-list {
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.social-link-item a {
+  display: block;
+  width: 100%;
+  padding: var(--space-sm);
+  border-radius: 0.5rem;
+  background: var(--grey-700);
+  color: var(--white);
+  text-decoration: none;
+  text-align: center;
+  font-weight: 700;
+  transition: background-color 300ms ease-in, color 300ms ease-in;
+}
+
+.social-link-item a:hover,
+.social-link-item a:focus {
+  background: var(--primary-accent);
+  color: var(--grey-700);
+}
+
+.social-link-item-hidden a {
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.social-link-item-hidden a:hover,
+.social-link-item-hidden a:focus {
+  background: var(--white);
+  color: var(--grey-700);
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 448px;
+  }
+
+  .card {
+    padding: var(--space-xl);
+  }
+}
