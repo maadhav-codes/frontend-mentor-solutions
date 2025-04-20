@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favicon-32x32.png"
+      type="image/png"
+    />
+    <title>Frontend Mentor | NFT preview card component</title>
+
+    <!-- Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- Author -->
+    <meta name="author" content="https://github.com/maadhav-codes" />
+  </head>
+
+  <body>
+    <main class="container">
+      <article class="card">
+        <figure>
+          <img
+            src="./assets/images/image-equilibrium.jpg"
+            alt="Equilibrium NFT artwork showing a 3D glass cube"
+          />
+          <figcaption class="sr-only">Equilibrium NFT artwork</figcaption>
+        </figure>
+
+        <div class="content">
+          <header>
+            <h1>Equilibrium #3429</h1>
+            <p>Our Equilibrium collection promotes balance and calm.</p>
+          </header>
+
+          <div class="nft-info">
+            <div class="price">
+              <img
+                src="./assets/images/icon-ethereum.svg"
+                alt="Ethereum icon"
+              />
+              <span>0.041 ETH</span>
+            </div>
+
+            <div class="time">
+              <img src="./assets/images/icon-clock.svg" alt="Clock icon" />
+              <time datetime="P3D">3 days left</time>
+            </div>
+          </div>
+
+          <hr />
+
+          <footer class="author">
+            <img
+              src="./assets/images/image-avatar.png"
+              alt="Jules Wyvern profile picture"
+            />
+
+            <p>Creation of <a href="#jules-wyvern-profile">Jules Wyvern</a></p>
+          </footer>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>
