@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favicon-32x32.png"
+      type="image/png"
+    />
+    <title>Frontend Mentor | Stats preview card component</title>
+
+    <!-- Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=Lexend+Deca:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <!-- Author -->
+    <meta name="author" content="https://github.com/maadhav-codes" />
+  </head>
+
+  <body>
+    <main class="container">
+      <div class="card">
+        <picture>
+          <source
+            media="min-width: 1280px"
+            srcset="./assets/images/image-header-desktop.jpg"
+          />
+          <img
+            src="./assets/images/image-header-mobile.jpg"
+            alt="People working together in an office environment"
+          />
+        </picture>
+
+        <section class="content">
+          <header>
+            <h1>Get <span>insights</span> that help your business grow.</h1>
+            <p>
+              Discover the benefits of data analytics and make better decisions
+              regarding revenue, customer experience, and overall efficiency.
+            </p>
+          </header>
+
+          <section class="stats">
+            <h2 class="sr-only">Key Statistics</h2>
+
+            <dl class="stats-list">
+              <div class="stat">
+                <dt>10k+</dt>
+                <dd>companies</dd>
+              </div>
+
+              <div class="stat">
+                <dt>314</dt>
+                <dd>templates</dd>
+              </div>
+
+              <div class="stat">
+                <dt>12m+</dt>
+                <dd>queries</dd>
+              </div>
+            </dl>
+          </section>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
