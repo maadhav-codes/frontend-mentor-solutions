@@ -23,6 +23,7 @@ body {
   font-family: var(--font-deca);
   font-weight: var(--fw-regular);
 
+  background-color: var(--light-grey);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -63,7 +64,7 @@ body {
 }
 
 .card h2 {
-  font-family: var(--shoulder);
+  font-family: var(--font-shoulder);
   font-size: 2.5rem;
   font-weight: var(--fw-bold);
   color: var(--light-grey);
@@ -73,7 +74,7 @@ body {
 
 .card p {
   font-size: 0.9375rem;
-  line-height: 1.2;
+  line-height: 1.6;
   color: var(--paragraph);
   margin-bottom: 1.5rem;
 }
@@ -86,7 +87,7 @@ body {
   background: var(--light-grey);
 
   font-size: 0.9375rem;
-  line-height: 1.2;
+  line-height: 1.6;
   text-decoration: none;
 
   transition: all 260ms ease-in;
