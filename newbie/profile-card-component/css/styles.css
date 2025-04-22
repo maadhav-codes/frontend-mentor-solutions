@@ -17,7 +17,12 @@
 body {
   font-family: "Kumbh Sans", sans-serif;
   font-weight: 400;
-  background: var(--cyan);
+  background-color: var(--cyan);
+  background-image: url("../assets/images/bg-pattern-top.svg"),
+    url("../assets/images/bg-pattern-bottom.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain, contain;
+  background-position: right 50vw bottom 50vh, left 50vw top 50vh;
 
   display: flex;
   align-items: center;
