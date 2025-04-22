@@ -1,0 +1,119 @@
+/* Base styles and CSS reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --cyan: hsl(185, 75%, 39%);
+  --dark-blue: hsl(229, 23%, 23%);
+  --gray-blue: hsl(227, 10%, 46%);
+  --white: hsl(0, 0%, 100%);
+  --divider: hsl(225, 10%, 92%);
+  --shadow: hsla(197, 85, 20, 50%);
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  font-weight: 400;
+  background: var(--cyan);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 1.5rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 352px;
+  margin: 0 auto;
+}
+
+.card {
+  border-radius: 1rem;
+  background: var(--white);
+  box-shadow: 0 50px 100px -20px var(--shadow);
+  padding-bottom: 1.5rem;
+  overflow: hidden;
+}
+
+.bg-bubbles {
+  width: 100%;
+  min-height: 140px;
+  background-image: url("../assets/images/bg-pattern-card.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.content {
+  margin-top: -3rem;
+}
+
+figure {
+  margin-bottom: 1.125rem;
+}
+
+figure img {
+  display: block;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  border: 5px solid var(--white);
+  margin: 0 auto;
+}
+
+.info {
+  text-align: center;
+}
+
+.info h1 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--dark-blue);
+  margin-bottom: 0.5rem;
+}
+
+.info h1 time {
+  font-weight: 400;
+  color: var(--gray-blue);
+  margin-left: 0.5rem;
+}
+
+.info p {
+  font-size: 0.875rem;
+  color: var(--gray-blue);
+}
+
+hr {
+  margin: 1.5rem 0;
+  border: none;
+  border-top: 1px solid var(--divider);
+}
+
+.stats {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat h2 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--dark-blue);
+  margin-bottom: 0.25rem;
+}
+
+.stat p {
+  font-size: 0.625rem;
+  letter-spacing: 1.5px;
+  color: var(--gray-blue);
+}
