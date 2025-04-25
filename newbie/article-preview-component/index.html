@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-      rel="shortcut icon"
+      rel="icon"
       href="./assets/images/favicon-32x32.png"
       type="image/png"
     />
@@ -67,6 +67,8 @@
                 type="button"
                 class="share_btn"
                 aria-label="Share this article"
+                aria-expanded="false"
+                aria-controls="share-panel"
               >
                 <img
                   src="./assets/images/icon-share.svg"
@@ -76,7 +78,7 @@
               </button>
             </div>
 
-            <div class="share_panel">
+            <div class="share_panel" id="share-panel" aria-hidden="true">
               <div class="share_content">
                 <span class="panel_label">Share</span>
 
@@ -110,7 +112,9 @@
               <button
                 type="button"
                 class="share_btn"
-                aria-label="Share this article"
+                aria-label="Close share panel"
+                aria-expanded="true"
+                aria-controls="share-panel"
               >
                 <img
                   src="./assets/images/icon-share.svg"
@@ -123,5 +127,51 @@
         </div>
       </article>
     </main>
+
+    <script>
+      const sharePanel = document.querySelector(".share_panel");
+      const openSharePanel = document.querySelector(".author_wrapper button");
+      const closeSharePanel = document.querySelector(".share_panel button");
+
+      function toggleSharePanel(close = false) {
+        const isOpen = sharePanel.classList.contains("active");
+
+        const state = close ? false : !isOpen;
+
+        sharePanel.classList.toggle("active", state);
+        openSharePanel.setAttribute("aria-expanded", state);
+        closeSharePanel.setAttribute("aria-expanded", state);
+      }
+
+      // Open Panel on click
+      openSharePanel.addEventListener("click", (e) => {
+        e.stopPropagation();
+        toggleSharePanel();
+      });
+
+      // Close Panel on click
+      closeSharePanel.addEventListener("click", (e) => {
+        e.stopPropagation();
+        toggleSharePanel();
+      });
+
+      // Close panel when clicking outside
+      document.addEventListener("click", (event) => {
+        const isClickedInside =
+          sharePanel.contains(event.target) ||
+          openSharePanel.contains(event.target);
+
+        if (!isClickedInside) {
+          toggleSharePanel(true);
+        }
+      });
+
+      // Keyboard Support
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && sharePanel.classList.contains("active")) {
+          toggleSharePanel(true);
+        }
+      });
+    </script>
   </body>
 </html>
