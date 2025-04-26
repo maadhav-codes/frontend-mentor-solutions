@@ -16,8 +16,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [GitHub Repository](https://github.com/maadhav-codes/fm-base-apparel-coming-soon-solution)
-- Live Site URL: [Live Demo](https://github.com/maadhav-codes/fm-base-apparel-coming-soon-solution)
+- Solution URL: [GitHub Repository](https://github.com/maadhav-codes/fm-base-apparel-coming-soon-page-solution)
+- Live Site URL: [Live Demo](https://maadhav-codes.github.io/fm-base-apparel-coming-soon-page-solution/)
 
 ## My process
 
