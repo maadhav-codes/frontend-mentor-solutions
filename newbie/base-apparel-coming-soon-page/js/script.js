@@ -35,6 +35,21 @@ function handleForm() {
     }
   }
 
+  function showSuccess() {
+    const existingSuccess = formGroup.querySelector(".success-text");
+    if (existingSuccess) {
+      existingSuccess.remove();
+    }
+
+    formGroup.classList.add("success");
+    formGroup.classList.remove("error");
+
+    const successElement = document.createElement("p");
+    successElement.classList.add("success-text");
+    successElement.textContent = "Thank you for subscribing!";
+    formGroup.appendChild(successElement);
+  }
+
   formElement.addEventListener("submit", (event) => {
     event.preventDefault();
 
@@ -51,7 +66,8 @@ function handleForm() {
     }
 
     clearError();
-    formGroup.classList.add("success");
+
+    showSuccess();
 
     formElement.reset();
   });

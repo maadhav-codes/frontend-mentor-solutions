@@ -164,13 +164,18 @@ figure img {
   opacity: 1;
 }
 
-.form-group .error-text {
+.form-group .error-text,
+.form-group .success-text {
   position: absolute;
   bottom: -1.75rem;
   left: 1.5rem;
   display: none;
   color: var(--red);
   font-size: 0.8125rem;
+}
+
+.form-group .success-text {
+  color: var(--stone-400);
 }
 
 .form-group.error {
@@ -188,18 +193,9 @@ figure img {
   margin: -2px;
 }
 
-.form-group.error .error-text {
+.form-group.error .error-text,
+.form-group.success .success-text {
   display: block;
-}
-
-.form-group.success::after {
-  content: "Thank you for subscribing!";
-  position: absolute;
-  bottom: -1.75rem;
-  left: 1.5rem;
-  display: block;
-  color: var(--stone-400);
-  font-size: 0.8125rem;
 }
 
 @media (min-width: 768px) {
