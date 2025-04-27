@@ -129,7 +129,7 @@ form input::placeholder {
   color: var(--input-color);
 }
 
-.form-group output {
+output {
   display: none;
   font-size: 0.75rem;
   font-weight: var(--fw-medium);
@@ -191,6 +191,17 @@ footer p a {
   text-decoration: none;
   font-weight: 600;
   color: var(--red);
+}
+
+.success-message {
+  display: none;
+  margin-top: 1rem;
+  color: var(--green);
+  text-align: start;
+}
+
+.success-message.show {
+  display: block;
 }
 
 @media (min-width: 768px) {
