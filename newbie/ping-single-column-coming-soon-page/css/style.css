@@ -111,7 +111,7 @@ form {
   outline-offset: 2px;
 }
 
-.form-group output {
+output.error-message {
   display: none;
   font-size: 0.625rem;
   letter-spacing: 0.1px;
@@ -124,7 +124,11 @@ form {
   border-color: var(--rose);
 }
 
-.form-group.error output {
+.form-group.error input:focus {
+  outline-color: var(--rose);
+}
+
+.form-group.error output.error-message {
   display: block;
 }
 
@@ -151,6 +155,20 @@ form button:hover {
 form button:focus {
   outline: 2px solid var(--indigo);
   outline-offset: 2px;
+}
+
+output.success-message {
+  display: none;
+  margin-top: 1rem;
+  font-size: 0.625rem;
+  letter-spacing: 0.1px;
+
+  color: var(--blue);
+  text-align: center;
+}
+
+output.success-message.show {
+  display: block;
 }
 
 figure img {
@@ -225,6 +243,7 @@ footer p {
     display: flex;
     align-items: center;
     gap: 1rem;
+    position: relative;
   }
 
   .form-group {
@@ -239,7 +258,8 @@ footer p {
     font-size: 0.875rem;
   }
 
-  .form-group output {
+  output.error-message,
+  output.success-message {
     position: absolute;
     left: 2rem;
     bottom: -1.5rem;
@@ -277,7 +297,8 @@ footer p {
     font-size: 1rem;
   }
 
-  .form-group output {
+  output.error-message,
+  output.success-message {
     font-size: 0.75rem;
   }
 
