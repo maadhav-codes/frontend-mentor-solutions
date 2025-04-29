@@ -9,6 +9,7 @@
   --white: hsl(0, 100%, 100%);
   --purple-100: hsl(275, 100%, 97%);
   --purple-600: hsl(292, 16%, 49%);
+  --purple-800: hsl(281, 83%, 54%);
   --purple-950: hsl(292, 42%, 14%);
 
   --card-shadow: 0 32px 56px 0 hsla(281, 100%, 23%, 0.1);
@@ -25,6 +26,7 @@ body {
   justify-content: center;
   min-height: 100vh;
   padding: 1.5rem;
+  padding-top: 5rem;
 
   position: relative;
 }
@@ -95,6 +97,11 @@ body::before {
   font-size: 1rem;
   font-weight: 600;
   color: var(--purple-950);
+  transition: color 280ms ease;
+}
+
+.faq-header:hover h2 {
+  color: var(--purple-800);
 }
 
 .faq-header button {
