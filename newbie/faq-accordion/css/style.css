@@ -1,0 +1,160 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white: hsl(0, 100%, 100%);
+  --purple-100: hsl(275, 100%, 97%);
+  --purple-600: hsl(292, 16%, 49%);
+  --purple-950: hsl(292, 42%, 14%);
+
+  --card-shadow: 0 32px 56px 0 hsla(281, 100%, 23%, 0.1);
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+
+  background: var(--purple-100) no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 1.5rem;
+
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  height: 35%;
+  background: url("../assets/images/background-pattern-mobile.svg") no-repeat;
+  background-size: cover;
+  z-index: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 37.5rem;
+  margin: 0 auto;
+
+  position: relative;
+  z-index: 1;
+}
+
+.card {
+  border-radius: 0.5rem;
+  background-color: var(--white);
+  box-shadow: var(--card-shadow);
+  padding: 1.5rem;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.card-header img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.card-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--purple-950);
+}
+
+.faq {
+  display: flex;
+  flex-direction: column;
+}
+
+.faq hr {
+  border: none;
+  border-top: 1px solid var(--purple-100);
+  margin: 1.25rem 0;
+}
+
+.faq-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.faq-header h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--purple-950);
+}
+
+.faq-header button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.faq-answer {
+  margin-top: 0;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--purple-600);
+
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.3s ease, opacity 0.3s ease-in, margin 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+  opacity: 1;
+  max-height: fit-content;
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  body::before {
+    background: url("../assets/images/background-pattern-desktop.svg") no-repeat;
+    background-size: cover;
+  }
+
+  .card {
+    border-radius: 1rem;
+    padding: 2.5rem;
+  }
+
+  .card-header img {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .card-header h1 {
+    font-size: 3.5rem;
+  }
+
+  .faq-header h2 {
+    font-size: 1.125rem;
+  }
+
+  .faq-answer {
+    font-size: 1rem;
+    margin-top: 0;
+  }
+
+  .faq-item.active .faq-answer {
+    margin-top: 2rem;
+  }
+
+  .faq hr {
+    margin: 1.5rem 0;
+  }
+}
