@@ -32,20 +32,31 @@
           <img src="./assets/images/logo.svg" alt="News Homepage Logo" />
         </a>
 
-        <button type="button">
+        <button type="button" onclick="openMenu()">
           <img src="./assets/images/icon-menu.svg" alt="" aria-hidden="true" />
           <span class="sr-only">Open Menu</span>
         </button>
 
-        <nav class="desktop-nav">
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#new">New</a></li>
-            <li><a href="#popular">Popular</a></li>
-            <li><a href="#trending">Trending</a></li>
-            <li><a href="#categories">Categories</a></li>
-          </ul>
-        </nav>
+        <div class="overlay">
+          <nav class="navigation">
+            <button type="button" onclick="closeMenu()">
+              <img
+                src="./assets/images/icon-menu-close.svg"
+                alt=""
+                aria-hidden="true"
+              />
+              <span class="sr-only">Close Menu</span>
+            </button>
+
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#new">New</a></li>
+              <li><a href="#popular">Popular</a></li>
+              <li><a href="#trending">Trending</a></li>
+              <li><a href="#categories">Categories</a></li>
+            </ul>
+          </nav>
+        </div>
       </header>
 
       <main>
@@ -155,5 +166,15 @@
         </section>
       </main>
     </div>
+
+    <script>
+      function openMenu() {
+        document.querySelector(".overlay").classList.add("is-open");
+      }
+
+      function closeMenu() {
+        document.querySelector(".overlay").classList.remove("is-open");
+      }
+    </script>
   </body>
 </html>

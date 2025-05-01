@@ -12,6 +12,7 @@
   --neutral-300: hsl(233, 8%, 79%);
   --neutral-500: hsl(236, 13%, 42%);
   --slate-900: hsl(240, 100%, 5%);
+  --slate-900-50: hsla(240, 100%, 5%, 0.5);
 }
 
 body {
@@ -25,6 +26,7 @@ body {
   justify-content: center;
   min-height: 100vh;
   padding: 1.75rem 1rem;
+  position: relative;
 }
 
 .container {
@@ -78,8 +80,50 @@ a.site-logo img {
   width: 2.8rem;
 }
 
-.desktop-nav {
-  display: none;
+.overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  background-color: var(--slate-900-50);
+  z-index: 1;
+
+  transform: translateX(100%);
+  transition: transform 280ms ease-in;
+}
+
+.overlay.is-open {
+  transform: translateX(0);
+}
+
+.navigation {
+  width: 70%;
+  margin-left: auto;
+  height: 100%;
+  background-color: var(--off-white);
+  padding: 9rem 1.5rem;
+}
+
+.navigation button {
+  position: absolute;
+  top: 1.75rem;
+  right: 1.5rem;
+}
+
+.navigation ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.navigation a {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--neutral-500);
+  transition: color 280ms ease-in;
+}
+
+.navigation a:hover {
+  color: var(--red-500);
 }
 
 .hero-content {
@@ -198,6 +242,7 @@ a.site-logo img {
   line-height: 1.2;
   color: var(--slate-900);
   margin-bottom: 0.5rem;
+  transition: color 280ms ease-in;
 }
 
 .trending-item:hover h4 {
@@ -214,9 +259,18 @@ a.site-logo img {
   .container {
     max-width: 40rem;
   }
+
+  .navigation {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  .trending-items {
+    flex-direction: row;
+  }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1024px) {
   body {
     padding: 4rem 2rem;
   }
@@ -237,25 +291,30 @@ a.site-logo img {
     display: none;
   }
 
-  .desktop-nav {
-    display: block;
+  .overlay {
+    position: relative;
+    inset: initial;
+    background: initial;
+    z-index: initial;
+    width: auto;
+    transform: translateX(0);
   }
 
-  .desktop-nav ul {
-    display: flex;
+  .navigation {
+    padding: 0;
+    width: 100%;
+    margin: 0;
+    background: none;
+  }
+
+  .navigation ul {
+    flex-direction: row;
     align-items: center;
     gap: 2.5rem;
   }
 
-  .desktop-nav a {
-    font-size: 0.9375rem;
-    line-height: 1.6;
-    color: var(--neutral-500);
-    transition: color 280ms ease-in;
-  }
-
-  .desktop-nav a:hover {
-    color: var(--red-500);
+  .navigation a {
+    font-size: 1rem;
   }
 
   main {
@@ -307,13 +366,11 @@ a.site-logo img {
   .hero-content button {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
+
+    justify-self: flex-start;
   }
 
   .news h2 {
     font-size: 2.5rem;
-  }
-
-  .trending-items {
-    flex-direction: row;
   }
 }
