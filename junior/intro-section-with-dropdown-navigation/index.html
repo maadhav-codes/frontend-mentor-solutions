@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="./assets/images/favicon-32x32.png"
+      type="image/png"
+    />
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+    <!-- Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- Author -->
+    <meta name="author" content="https://github.com/maadhav-codes" />
+  </head>
+
+  <body>
+    <div class="container">
+      <header class="site-header">
+        <a href="/" class="site-logo">
+          <img src="./assets/images/logo.svg" alt="Company Logo" />
+        </a>
+
+        <button
+          type="button"
+          class="nav-toggle"
+          aria-label="Open navigation menu"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+        >
+          <img src="./assets/images/icon-menu.svg" alt="" aria-hidden="true" />
+        </button>
+
+        <div class="overlay is-open">
+          <nav id="primary-navigation">
+            <button
+              type="button"
+              class="close-menu"
+              aria-label="Close navigation menu"
+              aria-controls="primary-navigation"
+              aria-expanded="true"
+            >
+              <img
+                src="./assets/images/icon-close-menu.svg"
+                alt=""
+                aria-hidden="true"
+              />
+            </button>
+
+            <ul class="nav-list">
+              <li class="nav-item">
+                <button
+                  type="button"
+                  class="dropdown-toggle"
+                  aria-expanded="false"
+                  aria-controls="features-dropdown"
+                >
+                  Features
+                  <img
+                    src="./assets/images/icon-arrow-down.svg"
+                    alt=""
+                    class="dropdown-icon"
+                    aria-hidden="true"
+                  />
+                </button>
+
+                <div class="dropdown active" id="features-dropdown">
+                  <ul class="dropdown-list">
+                    <li>
+                      <a href="#todo-list">
+                        <img
+                          src="./assets/images/icon-todo.svg"
+                          alt="Todo List Icon"
+                          aria-hidden="true"
+                        />
+                        Todo List
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="#calendar">
+                        <img
+                          src="./assets/images/icon-calendar.svg"
+                          alt="Calendar Icon"
+                          aria-hidden="true"
+                        />
+                        Calendar
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="#reminders">
+                        <img
+                          src="./assets/images/icon-reminders.svg"
+                          alt="Reminders Icon"
+                          aria-hidden="true"
+                        />
+                        Reminders
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="#planning">
+                        <img
+                          src="./assets/images/icon-planning.svg"
+                          alt="Planning Icon"
+                          aria-hidden="true"
+                        />
+                        Planning
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+
+              <li class="nav-item">
+                <button
+                  type="button"
+                  class="dropdown-toggle"
+                  aria-expanded="false"
+                  aria-controls="company-dropdown"
+                >
+                  Company
+                  <img
+                    src="./assets/images/icon-arrow-down.svg"
+                    alt=""
+                    class="dropdown-icon"
+                    aria-hidden="true"
+                  />
+                </button>
+
+                <div class="dropdown" id="company-dropdown">
+                  <ul class="dropdown-list">
+                    <li><a href="#history">History</a></li>
+
+                    <li><a href="#our-team">Our Team</a></li>
+
+                    <li><a href="#blog">Blog</a></li>
+                  </ul>
+                </div>
+              </li>
+
+              <li class="nav-item">
+                <a href="#careers">Careers</a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#about">About</a>
+              </li>
+            </ul>
+
+            <div class="auth-actions">
+              <a href="#login" class="btn-primary">Login</a>
+              <a href="#register" class="btn-secondary">Register</a>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero">
+          <picture class="hero-image">
+            <source
+              srcset="./assets/images/image-hero-desktop.png"
+              media="(min-width: 1280px)"
+            />
+            <img
+              src="./assets/images/image-hero-mobile.png"
+              alt="Person working remotely on a laptop with abstract geometric shapes in the background."
+            />
+          </picture>
+
+          <div class="hero-content">
+            <h1>Make remote work</h1>
+            <p>
+              Get your team in sync, no matter your location. Streamline
+              processes, create team rituals, and watch productivity soar.
+            </p>
+
+            <a href="#learn-more" class="btn-terniary">Learn more</a>
+          </div>
+
+          <section class="clients">
+            <h2 class="sr-only">Our Clients</h2>
+            <ul class="clients-list">
+              <li>
+                <a href="#databiz">
+                  <img
+                    src="./assets/images/client-databiz.svg"
+                    alt="Databiz client logo"
+                  />
+                </a>
+              </li>
+
+              <li>
+                <a href="#audiophile">
+                  <img
+                    src="./assets/images/client-audiophile.svg"
+                    alt="Audiophile client logo"
+                  />
+                </a>
+              </li>
+
+              <li>
+                <a href="#meet">
+                  <img
+                    src="./assets/images/client-meet.svg"
+                    alt="Meet client logo"
+                  />
+                </a>
+              </li>
+
+              <li>
+                <a href="#maker">
+                  <img
+                    src="./assets/images/client-maker.svg"
+                    alt="Maker client logo"
+                  />
+                </a>
+              </li>
+            </ul>
+          </section>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
