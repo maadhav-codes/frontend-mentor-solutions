@@ -38,11 +38,12 @@
           aria-label="Open navigation menu"
           aria-controls="primary-navigation"
           aria-expanded="false"
+          onclick="openMobileMenu()"
         >
           <img src="./assets/images/icon-menu.svg" alt="" aria-hidden="true" />
         </button>
 
-        <div class="overlay is-open">
+        <div class="overlay">
           <nav id="primary-navigation">
             <button
               type="button"
@@ -50,6 +51,7 @@
               aria-label="Close navigation menu"
               aria-controls="primary-navigation"
               aria-expanded="true"
+              onclick="closeMobileMenu()"
             >
               <img
                 src="./assets/images/icon-close-menu.svg"
@@ -65,6 +67,7 @@
                   class="dropdown-toggle"
                   aria-expanded="false"
                   aria-controls="features-dropdown"
+                  onclick="toggleDropdown(event)"
                 >
                   Features
                   <img
@@ -75,7 +78,7 @@
                   />
                 </button>
 
-                <div class="dropdown active" id="features-dropdown">
+                <div class="dropdown" id="features-dropdown">
                   <ul class="dropdown-list">
                     <li>
                       <a href="#todo-list">
@@ -130,6 +133,7 @@
                   class="dropdown-toggle"
                   aria-expanded="false"
                   aria-controls="company-dropdown"
+                  onclick="toggleDropdown(event)"
                 >
                   Company
                   <img
@@ -234,5 +238,68 @@
         </section>
       </main>
     </div>
+
+    <!-- JavaScript -->
+    <script>
+      const overlay = document.querySelector(".overlay");
+      const navToggle = document.querySelector(".nav-toggle");
+
+      const dropdownToggles = document.querySelectorAll(".dropdown-toggle");
+
+      function openMobileMenu() {
+        overlay.classList.add("is-open");
+        navToggle.setAttribute("aria-expanded", "true");
+
+        document.body.classList.add("stop-scrolling");
+      }
+
+      function closeMobileMenu() {
+        overlay.classList.remove("is-open");
+        navToggle.setAttribute("aria-expanded", "false");
+
+        document.body.classList.remove("stop-scrolling");
+      }
+
+      function toggleDropdown(event) {
+        const toggler = event.currentTarget;
+        const dropdownIcon = toggler.querySelector(".dropdown-icon");
+        const dropdownId = toggler.getAttribute("aria-controls");
+        const dropdown = document.getElementById(dropdownId);
+        const isExpanded = toggler.getAttribute("aria-expanded") === "true";
+
+        console.log(dropdownIcon);
+
+        if (isExpanded) {
+          dropdown.classList.remove("active");
+          toggler.setAttribute("aria-expanded", "false");
+          dropdownIcon.setAttribute(
+            "src",
+            "./assets/images/icon-arrow-down.svg"
+          );
+        } else {
+          dropdown.classList.add("active");
+          toggler.setAttribute("aria-expanded", "true");
+          dropdownIcon.setAttribute("src", "./assets/images/icon-arrow-up.svg");
+        }
+      }
+
+      function closeAllDropdown() {
+        document.querySelectorAll(".dropdown").forEach((dropdown) => {
+          const toggle = dropdown.previousElementSibling;
+
+          dropdown.classList.remove("active");
+          toggle.setAttribute("aria-expanded", "false");
+        });
+      }
+
+      document.addEventListener("click", (event) => {
+        const isOutsideDropdown = !event.target.closest(".dropdown");
+        const isNotToggle = !event.target.closest(".dropdown-toggle");
+
+        if (isOutsideDropdown && isNotToggle) {
+          closeAllDropdown();
+        }
+      });
+    </script>
   </body>
 </html>

@@ -32,6 +32,10 @@ body {
   line-height: 1.6;
 }
 
+body.stop-scrolling {
+  overflow: hidden;
+}
+
 .container {
   width: 100%;
   max-width: 32rem;
@@ -300,6 +304,10 @@ button:focus-visible {
     background-color: var(--off-white);
   }
 
+  body.stop-scrolling {
+    overflow: auto;
+  }
+
   .container {
     max-width: 1440px;
   }
@@ -374,6 +382,7 @@ button:focus-visible {
     border-radius: 0.625rem;
     height: auto;
     overflow: hidden;
+    padding: 1.5rem;
 
     transition: opacity var(--transition), visibility var(--transition),
       transform var(--transition);
