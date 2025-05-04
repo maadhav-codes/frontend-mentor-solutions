@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --slate-600: hsl(217, 19%, 38%);
+  --slate-900: hsl(217, 19%, 24%);
+  --slate-950: hsl(218, 23%, 16%);
+  --green-300: hsl(150, 100%, 66%);
+  --cyan-300: hsl(193, 38%, 86%);
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+
+  background-color: var(--slate-950);
+  padding: 1rem;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.card {
+  width: 100%;
+  max-width: 24rem;
+  border-radius: 0.625rem;
+  background-color: var(--slate-900);
+  box-shadow: 30px 50px 80px 0 hsla(0, 0%, 0%, 0.1);
+  padding: 2.5rem 1.5rem 4rem;
+  text-align: center;
+  position: relative;
+}
+
+.card h2 {
+  font-size: 0.6875rem;
+  letter-spacing: 3.46px;
+  color: var(--green-300);
+  text-transform: uppercase;
+}
+
+.card blockquote {
+  margin: 1.5rem 0;
+}
+
+.card p {
+  font-size: 1.5rem;
+  letter-spacing: -0.26px;
+  color: var(--cyan-300);
+}
+
+.card button {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: var(--green-300);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  left: 50%;
+  bottom: -2rem;
+  transform: translateX(-50%);
+
+  transition: box-shadow 280ms ease-in;
+}
+
+.card button:hover {
+  box-shadow: 0 0 40px 0 var(--green-300);
+}
+
+.card button img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .card {
+    max-width: 34rem;
+    border-radius: 1rem;
+    padding: 3rem 3rem 4.5rem;
+  }
+
+  .card h2 {
+    font-size: 0.8125rem;
+    letter-spacing: 4.09px;
+  }
+
+  .card blockquote {
+    margin-bottom: 2.5rem;
+  }
+
+  .card p {
+    font-size: 1.75rem;
+    letter-spacing: -0.3px;
+  }
+}

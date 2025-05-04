@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="./assets/images/favicon-32x32.png"
+      type="image/png"
+    />
+    <title>Frontend Mentor | Advice generator app</title>
+
+    <!-- Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- Author -->
+    <meta name="author" content="https://github.com/maadhav-codes" />
+  </head>
+
+  <body>
+    <header>
+      <h1 class="sr-only">Advice Generator App</h1>
+    </header>
+
+    <main>
+      <article class="card">
+        <header>
+          <h2>Advice #<span id="advice-id" aria-live="polite"></span></h2>
+        </header>
+
+        <blockquote>
+          <p id="advice" aria-live="polite">
+            “<span
+              >It is easy to sit up and take notice, what's difficult is getting
+              up and taking action.</span
+            >”
+          </p>
+        </blockquote>
+
+        <div class="divider">
+          <picture>
+            <source
+              srcset="./assets/images/pattern-divider-desktop.svg"
+              media="(min-width: 768px)"
+            />
+            <img
+              src="./assets/images/pattern-divider-mobile.svg"
+              alt="Decorative divider"
+            />
+          </picture>
+        </div>
+
+        <button type="button" aria-label="Generate new advice">
+          <img src="./assets/images/icon-dice.svg" alt="Dice icon" />
+        </button>
+      </article>
+    </main>
+  </body>
+</html>
