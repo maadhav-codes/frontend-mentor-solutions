@@ -5,11 +5,18 @@
 }
 
 :root {
+  /* Colors */
   --white: hsl(0, 0%, 100%);
   --off-white: hsl(0, 0%, 98%);
   --off-black: hsl(0, 0%, 8%);
   --overlay: hsla(0, 0%, 8%, 0.75);
   --stone-500: hsl(0, 0%, 41%);
+
+  /* Transition */
+  --transition: 280ms ease-in;
+
+  /* Shadow */
+  --dropdown-shadow: 0 10px 40px 0 hsla(0, 0%, 0%, 0.15);
 }
 
 body {
@@ -22,6 +29,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   padding-bottom: 2rem;
+  line-height: 1.6;
 }
 
 .container {
@@ -52,6 +60,7 @@ button {
 a {
   display: block;
   text-decoration: none;
+  color: inherit;
 }
 
 ul {
@@ -77,9 +86,9 @@ ul {
   width: 100%;
   height: 100vh;
   background-color: var(--overlay);
-  z-index: 2;
+  z-index: 10;
   transform: translateX(100%);
-  transition: transform 280ms ease-in;
+  transition: transform var(--transition);
   pointer-events: none;
 }
 
@@ -124,12 +133,14 @@ ul {
 .nav-item a,
 .nav-item button {
   font-size: 1rem;
-  line-height: 1.6;
   color: var(--stone-500);
+  transition: color var(--transition);
 }
 
 .nav-item a:hover,
-.nav-item button:hover {
+.nav-item button:hover,
+.nav-item a:focus-visible,
+.nav-item button:focus-visible {
   color: var(--off-black);
 }
 
@@ -149,7 +160,6 @@ ul {
 .dropdown-list {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   gap: 1rem;
 }
 
@@ -160,17 +170,22 @@ ul {
 .dropdown-list a {
   font-size: 1rem;
   color: var(--stone-500);
-  line-height: 1.8;
 
   display: flex;
+  align-items: center;
   gap: 1rem;
+  transition: color var(--transition);
+}
+
+.dropdown-list a:hover,
+.dropdown-list a:focus-visible {
+  color: var(--off-black);
 }
 
 .auth-actions {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   gap: 1rem;
 }
 
@@ -178,9 +193,11 @@ ul {
   font-size: 0.875rem;
   color: var(--stone-500);
   text-align: center;
+  transition: color var(--transition);
 }
 
-.auth-actions a:hover {
+.auth-actions a:hover,
+.auth-actions a:focus-visible {
   color: var(--off-black);
 }
 
@@ -189,9 +206,11 @@ ul {
   border-radius: 0.875rem;
   border: 1px solid var(--stone-500);
   padding: 0.75rem 1.5rem;
+  transition: border-color var(--transition);
 }
 
-.btn-secondary:hover {
+.btn-secondary:hover,
+.btn-secondary:focus-visible {
   border-color: var(--off-black);
 }
 
@@ -213,7 +232,6 @@ ul {
 .hero-content p {
   font-size: 1rem;
   color: var(--stone-500);
-  line-height: 1.6;
   margin-bottom: 1.5rem;
 }
 
@@ -234,9 +252,11 @@ ul {
   font-weight: 700;
   letter-spacing: -0.22px;
   color: var(--off-white);
+  transition: all var(--transition);
 }
 
-.btn-terniary:hover {
+.btn-terniary:hover,
+.btn-terniary:focus-visible {
   background-color: transparent;
   border-color: var(--off-black);
   color: var(--off-black);
@@ -247,6 +267,12 @@ ul {
   align-items: center;
   gap: 1.75rem;
   padding: 0 1rem;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--off-black);
+  outline-offset: 2px;
 }
 
 @media (min-width: 768px) {
@@ -287,7 +313,7 @@ ul {
     background-color: transparent;
     z-index: initial;
     transform: translateX(0%);
-    transition: transform 280ms ease-in;
+    /* transition: transform 280ms ease-in; */
     pointer-events: all;
 
     flex: 1;
@@ -328,7 +354,7 @@ ul {
 
   .dropdown {
     background-color: var(--white);
-    box-shadow: 0 10px 40px 0 hsla(0, 0%, 0%, 0.15);
+    box-shadow: var(--dropdown-shadow);
     border-radius: 0.625rem;
     margin-top: 1.25rem;
 
@@ -361,7 +387,25 @@ ul {
     gap: 2.5rem;
   }
 
+  .hero {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    justify-content: center;
+    column-gap: 7.5rem;
+    max-width: 71.25rem;
+    margin: 0 auto;
+  }
+
+  .hero-image {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+  }
+
   .hero-content {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    align-self: flex-end;
+
     margin: 0;
     padding: 0;
     text-align: left;
@@ -389,26 +433,6 @@ ul {
 
   .clients-list {
     gap: 2.5rem;
-  }
-
-  .hero {
-    display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    justify-content: center;
-    column-gap: 7.5rem;
-    max-width: 71.25rem;
-    margin: 0 auto;
-  }
-
-  .hero-image {
-    grid-column: 2 / 3;
-    grid-row: 1 / 3;
-  }
-
-  .hero-content {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-    align-self: flex-end;
   }
 
   .clients {
