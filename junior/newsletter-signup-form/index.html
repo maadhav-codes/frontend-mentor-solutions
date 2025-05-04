@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="./assets/images/favicon-32x32.png"
+      type="image/png"
+    />
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+
+    <!-- Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Author -->
+    <meta name="author" content="https://github.com/maadhav-codes" />
+  </head>
+
+  <body>
+    <main class="container">
+      <section class="newsletter-signup">
+        <picture>
+          <source
+            media="(min-width: 768px)"
+            srcset="./assets/images/illustration-sign-up-desktop.svg"
+          />
+          <img
+            src="./assets/images/illustration-sign-up-mobile.svg"
+            alt="Illustration showing charts and graphs representing data updates."
+          />
+        </picture>
+
+        <article class="content">
+          <h1>Stay updated!</h1>
+          <p>Join 60,000+ product managers receiving monthly updates on:</p>
+
+          <ul class="benefits-list">
+            <li>
+              <img
+                src="./assets/images/icon-list.svg"
+                alt=""
+                aria-hidden="true"
+              />
+              Product discovery and building what matters
+            </li>
+
+            <li>
+              <img
+                src="./assets/images/icon-list.svg"
+                alt=""
+                aria-hidden="true"
+              />
+              Measuring to ensure updates are a success
+            </li>
+
+            <li>
+              <img
+                src="./assets/images/icon-list.svg"
+                alt=""
+                aria-hidden="true"
+              />
+              And much more!
+            </li>
+          </ul>
+
+          <form class="signup-form" novalidate>
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="email@company.com"
+              />
+              <span id="email-error"></span>
+            </div>
+
+            <button type="submit">Subscribe to monthly newsletter</button>
+          </form>
+        </article>
+      </section>
+
+      <section class="newsletter-success">
+        <article class="success-content">
+          <img src="./assets/images/icon-success.svg" alt="Success checkmark" />
+
+          <h2>Thanks for subscribing!</h2>
+          <p>
+            A confirmation email has been sent to
+            <strong id="user-email">ash@loremcompany.com</strong>. Please open
+            it and click the button inside to confirm your subscription.
+          </p>
+          <button type="button">Dismiss message</button>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
