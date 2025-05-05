@@ -11,6 +11,9 @@
   --blue-700: hsl(235, 18%, 26%);
   --grey: hsl(0, 0%, 58%);
   --white: hsl(0, 0%, 100%);
+
+  --shadow-card: 0 15px 60px 0 hsla(0, 0%, 0%, 0.25);
+  --shadow-button: 0 16px 32px 0 hsla(4, 100%, 67%, 0.5);
 }
 
 body {
@@ -58,12 +61,11 @@ ul {
 
 .container {
   width: 100%;
-  max-width: 38rem;
-  margin: 0 auto;
 }
 
 .container section {
   background-color: var(--white);
+  margin: 0 auto;
 }
 
 .newsletter-signup .content {
@@ -142,9 +144,7 @@ ul {
 
 .form-group input:focus {
   border-color: var(--blue-800);
-}
 
-.form-group input:focus {
   outline: 2px solid var(--blue-700);
   outline-offset: 2px;
 }
@@ -175,7 +175,8 @@ ul {
   display: block;
 }
 
-.newsletter-signup .content button {
+.newsletter-signup button,
+.newsletter-success button {
   display: block;
   width: 100%;
   border-radius: 0.5rem;
@@ -189,8 +190,48 @@ ul {
   color: var(--white);
 }
 
-.newsletter-signup .content button:hover {
+.newsletter-signup button:hover,
+.newsletter-success button:hover {
   background: linear-gradient(45deg, hsl(15, 100%, 61%), hsl(346, 100%, 66%));
+  box-shadow: var(--shadow-button);
+}
+
+.newsletter-success {
+  padding: 9.25rem 1.5rem 4.25rem;
+  height: 100vh;
+}
+
+.success-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  height: 100%;
+}
+
+.success-content img {
+  width: 4rem;
+  height: 4rem;
+}
+
+.success-content h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--blue-800);
+}
+
+.success-content p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--blue-800);
+}
+
+.success-content p strong {
+  font-weight: 800;
+}
+
+.success-content button {
+  margin-top: auto;
 }
 
 @media (min-width: 768px) {
@@ -198,10 +239,15 @@ ul {
     padding: 4.5rem;
   }
 
-  .newsletter-signup {
+  .newsletter-signup,
+  .newsletter-success {
     border-radius: 2.25rem;
-    box-shadow: 0 15px 60px 0 hsla(0, 0%, 0%, 0.25);
+    box-shadow: var(--shadow-card);
+  }
+
+  .newsletter-signup {
     padding: 2.5rem;
+    max-width: 38rem;
   }
 
   .newsletter-signup picture img {
@@ -224,6 +270,16 @@ ul {
   .form-group {
     margin-bottom: 1rem;
   }
+
+  .newsletter-success {
+    padding: 4rem;
+    max-width: 31.5rem;
+    height: auto;
+  }
+
+  .success-content h2 {
+    font-size: 3.5rem;
+  }
 }
 
 @media (min-width: 1280px) {
@@ -239,6 +295,7 @@ ul {
     align-items: center;
     justify-content: center;
     column-gap: 2rem;
+    max-width: 56.5rem;
   }
 
   .newsletter-signup picture {
