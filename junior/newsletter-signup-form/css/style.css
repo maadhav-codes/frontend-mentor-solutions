@@ -159,7 +159,7 @@ ul {
   outline-color: var(--red);
 }
 
-.form-group span {
+.form-group output {
   display: none;
   font-size: 0.75rem;
   font-weight: 700;
@@ -171,7 +171,7 @@ ul {
   color: var(--red);
 }
 
-.form-group.error span {
+.form-group.error output {
   display: block;
 }
 
@@ -313,4 +313,26 @@ ul {
   .form-group {
     margin-bottom: 1.5rem;
   }
+}
+
+/* Transitions */
+.newsletter-signup,
+.newsletter-success {
+  transition: opacity 300ms ease, transform 300ms ease;
+}
+
+.newsletter-success {
+  opacity: 0;
+  transform: translateX(20px);
+  display: none;
+}
+
+.newsletter-signup.hidden {
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+.newsletter-success.visible {
+  opacity: 1;
+  transform: translateX(0);
 }
