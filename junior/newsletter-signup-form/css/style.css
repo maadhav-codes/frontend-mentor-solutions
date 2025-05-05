@@ -1,0 +1,259 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --red: hsl(4, 100%, 67%);
+  --red-100: hsl(2, 100%, 95%);
+  --blue-800: hsl(234, 29%, 20%);
+  --blue-700: hsl(235, 18%, 26%);
+  --grey: hsl(0, 0%, 58%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+
+  background-color: var(--blue-700);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 38rem;
+  margin: 0 auto;
+}
+
+.container section {
+  background-color: var(--white);
+}
+
+.newsletter-signup .content {
+  padding: 2.5rem 1.5rem;
+}
+
+.newsletter-signup .content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--blue-800);
+  margin-bottom: 1.5rem;
+}
+
+.newsletter-signup .content p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--blue-800);
+}
+
+.benefits-list {
+  margin: 1.5rem 0 2.5rem;
+}
+
+.benefits-list li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--blue-800);
+}
+
+.benefits-list li:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+.benefits-list li img {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.form-group label {
+  display: block;
+
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: var(--blue-800);
+  margin-bottom: 0.5rem;
+}
+
+.form-group input {
+  width: 100%;
+  border-radius: 0.5rem;
+  border: 1px solid var(--grey);
+  outline: none;
+  padding: 1rem 1.5rem;
+  background-color: transparent;
+
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--blue-800);
+  caret-color: var(--blue-800);
+}
+
+.form-group input::placeholder {
+  color: var(--grey);
+  opacity: 1;
+}
+
+.form-group input:focus {
+  border-color: var(--blue-800);
+}
+
+.form-group input:focus {
+  outline: 2px solid var(--blue-700);
+  outline-offset: 2px;
+}
+
+.form-group.error input {
+  border-color: var(--red);
+  background-color: var(--red-100);
+  color: var(--red);
+}
+
+.form-group.error input:focus {
+  outline-color: var(--red);
+}
+
+.form-group span {
+  display: none;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.5;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: var(--red);
+}
+
+.form-group.error span {
+  display: block;
+}
+
+.newsletter-signup .content button {
+  display: block;
+  width: 100%;
+  border-radius: 0.5rem;
+  background-color: var(--blue-800);
+  padding: 1rem 3rem;
+
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--white);
+}
+
+.newsletter-signup .content button:hover {
+  background: linear-gradient(45deg, hsl(15, 100%, 61%), hsl(346, 100%, 66%));
+}
+
+@media (min-width: 768px) {
+  body {
+    padding: 4.5rem;
+  }
+
+  .newsletter-signup {
+    border-radius: 2.25rem;
+    box-shadow: 0 15px 60px 0 hsla(0, 0%, 0%, 0.25);
+    padding: 2.5rem;
+  }
+
+  .newsletter-signup picture img {
+    border-radius: 1rem;
+  }
+
+  .newsletter-signup .content {
+    padding: 0;
+    margin-top: 2.5rem;
+  }
+
+  .newsletter-signup .content h1 {
+    font-size: 3.5rem;
+  }
+
+  .benefits-list {
+    margin: 1.5rem 0;
+  }
+
+  .form-group {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 56.5rem;
+  }
+
+  .newsletter-signup {
+    padding: 2rem;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    column-gap: 2rem;
+  }
+
+  .newsletter-signup picture {
+    order: 2;
+  }
+
+  .newsletter-signup .content h1 {
+    margin-bottom: 2rem;
+  }
+
+  .benefits-list {
+    margin: 2rem 0;
+  }
+
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+}
