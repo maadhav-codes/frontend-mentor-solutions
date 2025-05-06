@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="./assets/images/favicon-32x32.png"
+      type="image/png"
+    />
+    <title>Frontend Mentor | Age calculator app</title>
+
+    <!-- Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- Author -->
+    <meta name="author" content="https://github.com/maadhav-codes" />
+  </head>
+
+  <body>
+    <main class="container">
+      <section>
+        <h2 class="sr-only">Age Calculator App</h2>
+
+        <form id="age-form">
+          <div class="form-group">
+            <label for="day">Day</label>
+            <input
+              type="number"
+              name="day"
+              id="day"
+              placeholder="DD"
+              required
+              min="1"
+              max="31"
+            />
+            <output id="day-error" role="alert" aria-live="polite"></output>
+          </div>
+
+          <div class="form-group">
+            <label for="month">Month</label>
+            <input
+              type="number"
+              name="month"
+              id="month"
+              placeholder="MM"
+              required
+              min="1"
+              max="12"
+            />
+            <output id="month-error" role="alert" aria-live="polite"></output>
+          </div>
+
+          <div class="form-group">
+            <label for="year">Year</label>
+            <input
+              type="number"
+              name="year"
+              id="year"
+              placeholder="YYYY"
+              required
+              min="1900"
+            />
+            <output id="year-error" role="alert" aria-live="polite"></output>
+          </div>
+
+          <div class="btn-container">
+            <button type="submit">
+              <img
+                src="./assets/images/icon-arrow.svg"
+                alt=""
+                aria-hidden="true"
+              />
+              <span class="sr-only">Calculate Age</span>
+            </button>
+          </div>
+        </form>
+
+        <div class="results" aria-live="polite">
+          <p><output id="years-output">--</output> years</p>
+
+          <p><output id="months-output">--</output> months</p>
+
+          <p><output id="days-output">--</output> days</p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
