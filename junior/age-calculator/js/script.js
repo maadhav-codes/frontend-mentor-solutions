@@ -160,6 +160,29 @@ const validateInputs = (day, month, year) => {
   return isValid;
 };
 
+const animateValue = (element, start = 0, end, duration = 1000) => {
+  let startTimestamp = null;
+
+  const step = (timestamp) => {
+    if (!startTimestamp) {
+      startTimestamp = timestamp;
+    }
+
+    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+    const value = Math.floor(progress * (end - start) + start);
+
+    element.textContent = value;
+
+    if (progress < 1) {
+      window.requestAnimationFrame(step);
+    } else {
+      element.textContent = end;
+    }
+  };
+
+  window.requestAnimationFrame(step);
+};
+
 const calculateAge = (day, month, year) => {
   const birthDate = new Date(year, month - 1, day);
   const currentDate = new Date();
@@ -188,10 +211,10 @@ const calculateAge = (day, month, year) => {
     years--;
   }
 
-  // Display results
-  yearsOutput.textContent = years;
-  monthsOutput.textContent = months;
-  daysOutput.textContent = days;
+  // Animate the results
+  animateValue(yearsOutput, 0, years);
+  animateValue(monthsOutput, 0, months);
+  animateValue(daysOutput, 0, days);
 };
 
 const focusFirstError = () => {
