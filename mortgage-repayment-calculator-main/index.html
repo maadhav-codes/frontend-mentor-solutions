@@ -129,7 +129,7 @@
         </section>
 
         <section class="result-section" aria-live="polite">
-          <div class="empty-state inactive">
+          <div class="empty-state">
             <img
               src="/images/illustration-empty.svg"
               alt=""
@@ -142,7 +142,7 @@
             </p>
           </div>
 
-          <div class="completed-state ">
+          <div class="completed-state inactive">
             <h2>Your results</h2>
             <p>
               Your results are shown below based on the information you
@@ -153,19 +153,21 @@
             <div class="result-box">
               <div class="monthly">
                 <h3>Your monthly repayments</h3>
-                <output id="monthly-result">£1,797.74</output>
+                <output id="monthly-result"></output>
               </div>
 
               <hr />
 
               <div class="total">
                 <h3>Total you'll repay over the term</h3>
-                <output id="total-result">£539,322.94</output>
+                <output id="total-result"></output>
               </div>
             </div>
           </div>
         </section>
       </div>
     </main>
+
+    <script src="/js/script.js"></script>
   </body>
 </html>
