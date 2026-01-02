@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="/images/favicon-32x32.png"
+      type="image/png"
+    />
+    <title>Frontend Mentor | Mortgage repayment calculator</title>
+
+    <!-- Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <!-- Author -->
+    <meta name="author" content="https://github.com/maadhav-codes" />
+  </head>
+  <body>
+    <main class="container">
+      <div class="card">
+        <section class="form-section" aria-labelledby="calc-heading">
+          <header>
+            <h1 id="calc-heading">Mortgage Calculator</h1>
+            <button type="button" class="clear-btn">Clear All</button>
+          </header>
+
+          <form id="mortgage-form" novalidate autocomplete="off">
+            <div class="form-group">
+              <label for="amount">Mortgage Amount</label>
+              <div class="input-wrapper prefix">
+                <span class="symbol" aria-hidden="true">£</span>
+                <input
+                  type="number"
+                  id="amount"
+                  name="amount"
+                  inputmode="decimal"
+                  aria-describedby="amount-error"
+                  placeholder=""
+                  required
+                />
+              </div>
+              <span class="error-msg" id="amount-error" role="alert"
+                >This field is required</span
+              >
+            </div>
+
+            <div class="row">
+              <div class="form-group">
+                <label for="term">Mortgage Term</label>
+                <div class="input-wrapper suffix">
+                  <input
+                    type="number"
+                    id="term"
+                    name="term"
+                    inputmode="numeric"
+                    aria-describedby="term-error"
+                    placeholder=""
+                    required
+                  />
+                  <span class="symbol" aria-hidden="true">years</span>
+                </div>
+                <span class="error-msg" id="term-error" role="alert"
+                  >This field is required</span
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="rate">Interest Rate</label>
+                <div class="input-wrapper suffix">
+                  <input
+                    type="number"
+                    id="rate"
+                    name="rate"
+                    step="0.01"
+                    inputmode="decimal"
+                    aria-describedby="rate-error"
+                    placeholder=""
+                    required
+                  />
+                  <span class="symbol" aria-hidden="true">%</span>
+                </div>
+                <span class="error-msg" id="rate-error" role="alert"
+                  >This field is required</span
+                >
+              </div>
+            </div>
+
+            <div class="form-group">
+              <fieldset class="radio-group" aria-describedby="type-error">
+                <legend>Mortgage Type</legend>
+
+                <label class="radio-label">
+                  <input type="radio" name="type" value="repayment" required />
+                  <span class="radio-custom"></span>
+                  Repayment
+                </label>
+
+                <label class="radio-label">
+                  <input type="radio" name="type" value="interest" required />
+                  <span class="radio-custom"></span>
+                  Interest Only
+                </label>
+              </fieldset>
+
+              <span class="error-msg" id="type-error" role="alert"
+                >This field is required</span
+              >
+            </div>
+
+            <button type="submit" class="calculate-btn">
+              <img
+                src="/images/icon-calculator.svg"
+                alt=""
+                aria-hidden="true"
+                class="icon"
+              />
+              Calculate Repayments
+            </button>
+          </form>
+        </section>
+
+        <section class="result-section" aria-live="polite">
+          <div class="empty-state inactive">
+            <img
+              src="/images/illustration-empty.svg"
+              alt=""
+              aria-hidden="true"
+            />
+            <h2>Results shown here</h2>
+            <p>
+              Complete the form and click “calculate repayments” to see what
+              your monthly repayments would be.
+            </p>
+          </div>
+
+          <div class="completed-state ">
+            <h2>Your results</h2>
+            <p>
+              Your results are shown below based on the information you
+              provided. To adjust the results, edit the form and click
+              “calculate repayments” again.
+            </p>
+
+            <div class="result-box">
+              <div class="monthly">
+                <h3>Your monthly repayments</h3>
+                <output id="monthly-result">£1,797.74</output>
+              </div>
+
+              <hr />
+
+              <div class="total">
+                <h3>Total you'll repay over the term</h3>
+                <output id="total-result">£539,322.94</output>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
