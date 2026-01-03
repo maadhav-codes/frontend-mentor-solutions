@@ -26,13 +26,26 @@ const formatCurrency = (value) => {
 const clearErrors = () => {
   document.querySelectorAll(".form-group.error").forEach((field) => {
     field.classList.remove("error");
+    const input = field.querySelector("input");
+    if (input) {
+      input.setAttribute("aria-invalid", "false");
+    }
   });
+
+  if (radioGroupWrapper) {
+    radioGroupWrapper.classList.remove("error");
+  }
 };
 
-const showError = (input) => {
+const showError = (input, message) => {
   const inputField = input.closest(".form-group");
   if (inputField) {
     inputField.classList.add("error");
+    const errorMsg = inputField.querySelector(".error-msg");
+    if (errorMsg) {
+      errorMsg.textContent = message;
+    }
+    input.setAttribute("aria-invalid", "true");
   }
 };
 
@@ -72,12 +85,20 @@ const calculateInterestOnly = (amount, termYears, ratePercent) => {
 
 const validateValues = () => {
   let isValid = true;
+  let firstInvalidInput = null;
 
   [amountInput, termInput, rateInput].forEach((input) => {
-    const value = parseFloat(input.value);
-    if (Number.isNaN(value) || value <= 0) {
-      showError(input);
+    const valueStr = input.value.trim();
+    const value = parseFloat(valueStr);
+
+    if (valueStr === "") {
+      showError(input, "This field is required");
       isValid = false;
+      if (!firstInvalidInput) firstInvalidInput = input;
+    } else if (Number.isNaN(value) || value <= 0) {
+      showError(input, "Please enter a valid number");
+      isValid = false;
+      if (!firstInvalidInput) firstInvalidInput = input;
     }
   });
 
@@ -85,6 +106,10 @@ const validateValues = () => {
   if (!selectedRadio) {
     if (radioGroupWrapper) radioGroupWrapper.classList.add("error");
     isValid = false;
+  }
+
+  if (firstInvalidInput) {
+    firstInvalidInput.focus();
   }
 
   return { isValid, selectedRadio: selectedRadio ? selectedRadio.value : null };
