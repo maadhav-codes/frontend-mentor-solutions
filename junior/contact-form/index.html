@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="./assets/images/favicon-32x32.png"
+      type="image/png"
+    />
+    <title>Frontend Mentor | Contact form</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- Author -->
+    <meta name="author" content="https://github.com/maadhav-codes" />
+  </head>
+  <body>
+    <main class="card">
+      <header>
+        <h1>Contact Us</h1>
+      </header>
+
+      <form>
+        <div class="form-group">
+          <div class="input-group">
+            <label for="firstName">First Name</label>
+            <input
+              type="text"
+              name="firstName"
+              id="firstName"
+              placeholder="First Name"
+              required
+              aria-describedby="firstName-error"
+            />
+            <span
+              id="firstName-error"
+              class="error-message"
+              role="alert"
+            ></span>
+          </div>
+
+          <div class="input-group">
+            <label for="lastName">Last Name</label>
+            <input
+              type="text"
+              name="lastName"
+              id="lastName"
+              placeholder="Last Name"
+              required
+              aria-describedby="lastName-error"
+            />
+            <span id="lastName-error" class="error-message" role="alert"></span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="input-group">
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email Address"
+              required
+              aria-describedby="email-error"
+            />
+            <span id="email-error" class="error-message" role="alert"></span>
+          </div>
+        </div>
+
+        <fieldset>
+          <legend>Query Type</legend>
+
+          <div class="radio-group">
+            <label>
+              <input
+                type="radio"
+                id="general"
+                name="queryType"
+                value="general"
+                aria-describedby="queryType-error"
+              />
+              General Enquiry
+            </label>
+            <label>
+              <input
+                type="radio"
+                id="support"
+                name="queryType"
+                value="support"
+                aria-describedby="queryType-error"
+              />
+              Support Request
+            </label>
+
+            <span
+              id="queryType-error"
+              class="error-message"
+              role="alert"
+            ></span>
+          </div>
+        </fieldset>
+
+        <div class="form-group">
+          <div class="input-group">
+            <label for="message">Message</label>
+            <textarea
+              name="message"
+              id="message"
+              placeholder="Your Message"
+              required
+              aria-describedby="message-error"
+            ></textarea>
+            <span id="message-error" class="error-message" role="alert"></span>
+          </div>
+        </div>
+
+        <div class="consent-group">
+          <label>
+            <input type="checkbox" name="consent" id="consent" required />
+            I consent to being contacted by the team
+          </label>
+          <span id="consent-error" class="error-message" role="alert"></span>
+        </div>
+
+        <button type="submit">Submit</button>
+      </form>
+    </main>
+
+    <dialog>
+      <article class="success-message">
+        <header>
+          <img
+            src="./assets/images/icon-success-check.svg"
+            alt=""
+            role="presentation"
+            width="20"
+          />
+          <h2>Message Sent!</h2>
+        </header>
+
+        <p>Thanks for completing the form. We'll be in touch soon!</p>
+      </article>
+    </dialog>
+  </body>
+</html>
