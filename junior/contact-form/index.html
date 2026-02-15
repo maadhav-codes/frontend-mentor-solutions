@@ -22,7 +22,7 @@
         <h1>Contact Us</h1>
       </header>
 
-      <form>
+      <form novalidate>
         <div class="form-group">
           <div class="input-group">
             <label for="firstName">First Name</label>
@@ -81,6 +81,7 @@
                 name="queryType"
                 value="general"
                 aria-describedby="queryType-error"
+                required
               />
               General Enquiry
             </label>
@@ -129,7 +130,7 @@
       </form>
     </main>
 
-    <dialog>
+    <dialog aria-labelledby="success-title" aria-modal="true">
       <article class="success-message">
         <header>
           <img
@@ -137,12 +138,19 @@
             alt=""
             role="presentation"
             width="20"
+            aria-hidden="true"
           />
-          <h2>Message Sent!</h2>
+          <h2 id="success-title">Message Sent!</h2>
         </header>
 
         <p>Thanks for completing the form. We'll be in touch soon!</p>
+
+        <footer>
+          <button id="close-dialog" type="button">Close</button>
+        </footer>
       </article>
     </dialog>
+
+    <script src="./js/script.js"></script>
   </body>
 </html>

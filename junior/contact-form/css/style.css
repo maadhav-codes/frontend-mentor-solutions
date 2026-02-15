@@ -130,8 +130,8 @@ fieldset legend::after {
   color: var(--color-grey-900);
 }
 
-.input-group.error input,
-.input-group.error textarea {
+input.error,
+textarea.error {
   border-color: var(--color-red);
 }
 
@@ -316,6 +316,37 @@ dialog:open {
 .success-message p {
   line-height: 1.5;
   color: var(--color-green-200);
+}
+
+.success-message footer {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.success-message button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-white);
+  background-color: transparent;
+
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: var(--fw-regular);
+  color: var(--color-white);
+  cursor: pointer;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.success-message button:hover {
+  background-color: white;
+  color: var(--color-grey-900);
+}
+
+.success-message button:focus {
+  outline: 2px solid var(--color-green-600);
+  outline-offset: 2px;
 }
 
 @media screen and (min-width: 768px) {
