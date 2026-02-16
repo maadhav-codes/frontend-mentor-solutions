@@ -48,6 +48,29 @@ body {
   padding: 4.25rem 1.5rem 3rem;
 }
 
+.bg-decoration-top {
+  position: absolute;
+  width: 375px;
+  height: 658px;
+  top: -2.25rem;
+  right: -11.25rem;
+  background-image: url('../assets/images/bg-top.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.bg-decoration-bottom {
+  position: absolute;
+  width: 353px;
+  height: 304px;
+  bottom: 0;
+  left: 0;
+  background-image: url('../assets/images/bg-bottom.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: none;
+}
+
 .container {
   width: 100%;
   max-width: 38rem;
@@ -55,6 +78,9 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 4rem;
+
+  position: relative;
+  z-index: 2;
 }
 
 header {
@@ -270,12 +296,25 @@ input[type='checkbox']:focus-visible + .slider {
 }
 
 @media screen and (min-width: 768px) {
+  .bg-decoration-top {
+    right: -0.5rem;
+  }
+
   .card {
     padding-inline: 3.25rem;
   }
 }
 
 @media screen and (min-width: 1280px) {
+  .bg-decoration-top {
+    top: 0;
+    right: 0;
+  }
+
+  .bg-decoration-bottom {
+    display: block;
+  }
+
   .container {
     max-width: 66rem;
   }
