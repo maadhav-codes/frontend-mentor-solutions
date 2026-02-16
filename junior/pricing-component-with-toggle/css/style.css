@@ -1,0 +1,297 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../assets/fonts/woff2/Montserrat-Bold.woff2') format('woff2');
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  font-size: 16px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --fw-bold: 700;
+  --font-family: 'Montserrat', sans-serif;
+  --color-white: 0 0% 100%;
+  --color-black: 0 0% 0%;
+  --color-grey-650: 233 13% 49%;
+  --color-grey-700: 232 13% 33%;
+  --color-blue-50: 240 78% 98%;
+  --color-blue-200: 232 68% 89%;
+  --color-blue-500: 237 63% 65%;
+  --color-gradient-start: hsl(237, 73%, 79%);
+  --color-gradient-stop: hsl(238, 63%, 64%);
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-family: var(--font-family);
+  font-size: 0.9375rem;
+  font-weight: var(--fw-bold);
+  line-height: 1;
+  letter-spacing: 0;
+
+  background: hsl(var(--color-blue-50));
+  padding: 4.25rem 1.5rem 3rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 38rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  width: 100%;
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: var(--fw-bold);
+  line-height: 1.25;
+  text-align: center;
+  color: hsl(var(--color-grey-650));
+}
+
+.billing-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.billing-toggle span {
+  line-height: 1.85;
+  color: hsl(var(--color-grey-650) / 0.5);
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 3.5rem;
+  height: 2rem;
+}
+
+.switch input[type='checkbox'] {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background: var(--color-gradient-start);
+  background: linear-gradient(
+    135deg,
+    var(--color-gradient-start) 0%,
+    var(--color-gradient-stop) 100%
+  );
+  transition: 0.4s;
+  border-radius: 1rem;
+}
+
+.slider:hover {
+  opacity: 0.8;
+}
+
+.slider::before {
+  position: absolute;
+  content: '';
+  height: 1.5rem;
+  width: 1.5rem;
+  left: 0.25rem;
+  bottom: 0.25rem;
+  background-color: hsl(var(--color-white));
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input[type='checkbox']:checked + .slider::before {
+  transform: translateX(1.5rem);
+}
+
+input[type='checkbox']:focus-visible + .slider {
+  outline: 2px solid var(--color-gradient-start);
+  outline-offset: 2px;
+}
+
+.pricing-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+.card {
+  width: 100%;
+  padding: 1.625rem 1.75rem;
+  border-radius: 0.625rem;
+  background-color: hsl(var(--color-white));
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  box-shadow: 0 20px 40px 0 hsl(244, 61%, 89%, 0.5);
+}
+
+.card:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.card:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.card:nth-child(2) {
+  background: var(--color-gradient-start);
+  background: linear-gradient(
+    135deg,
+    var(--color-gradient-start) 0%,
+    var(--color-gradient-stop) 100%
+  );
+}
+
+.card h2 {
+  font-size: 1.125rem;
+  line-height: 1.55;
+  text-align: center;
+  color: hsl(var(--color-grey-650));
+}
+
+.price {
+  font-size: 2.5rem;
+  line-height: 1.25;
+  color: hsl(var(--color-grey-700));
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.price strong {
+  font-size: 4.5rem;
+  line-height: 1;
+  letter-spacing: -2px;
+}
+
+.card ul {
+  list-style: none;
+}
+
+.card li {
+  padding: 1rem;
+  border-top: 1px solid hsl(var(--color-grey-650) / 0.25);
+  text-align: center;
+  color: hsl(var(--color-grey-650));
+  line-height: 1.85;
+}
+
+.card:nth-child(2) li,
+.card:nth-child(2) li:last-child {
+  border-color: hsl(var(--color-white) / 0.25);
+}
+
+.card li:last-child {
+  border-bottom: 1px solid hsl(var(--color-grey-650) / 0.25);
+}
+
+.card:nth-child(2) h2,
+.card:nth-child(2) .price,
+.card:nth-child(2) li {
+  color: hsl(var(--color-white));
+}
+
+.card a {
+  display: inline-block;
+  width: 100%;
+  padding: 0.875rem 1.75rem;
+  border-radius: 0.375rem;
+  border: 1px solid transparent;
+  background: var(--color-gradient-start);
+  background: linear-gradient(
+    135deg,
+    var(--color-gradient-start) 0%,
+    var(--color-gradient-stop) 100%
+  );
+
+  font-size: 0.8125rem;
+  line-height: 1.25;
+  letter-spacing: 1.5px;
+  color: hsl(var(--color-white));
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition:
+    color 0.4s,
+    border-color 0.4s;
+}
+
+.card a:hover {
+  border-color: hsl(var(--color-blue-500));
+  background: transparent;
+  color: hsl(var(--color-blue-500));
+}
+
+.card:nth-child(2) a:hover {
+  border-color: hsl(var(--color-white));
+  background: transparent;
+  color: hsl(var(--color-white));
+}
+
+.card:nth-child(2) a {
+  background: hsl(var(--color-white));
+  color: hsl(var(--color-blue-500));
+}
+
+@media screen and (min-width: 768px) {
+  .card {
+    padding-inline: 3.25rem;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    max-width: 66rem;
+  }
+
+  .pricing-cards {
+    flex-direction: row;
+    gap: 0;
+  }
+
+  .card {
+    flex: 1;
+    padding-inline: 2rem;
+    min-width: 0;
+  }
+
+  .card:nth-child(2) {
+    padding-block: 3rem;
+  }
+}
