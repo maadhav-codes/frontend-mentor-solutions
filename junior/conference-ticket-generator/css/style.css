@@ -1,0 +1,93 @@
+@font-face {
+  font-family: 'Inconsolata';
+  src: url('../assets/fonts/Inconsolata-Regular.woff2') format('woff2');
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  font-variation-settings: 'wdth' 100;
+}
+
+@font-face {
+  font-family: 'Inconsolata';
+  src: url('../assets/fonts/Inconsolata-Medium.woff2') format('woff2');
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  font-variation-settings: 'wdth' 100;
+}
+
+@font-face {
+  font-family: 'Inconsolata';
+  src: url('../assets/fonts/Inconsolata-Bold.woff2') format('woff2');
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  font-variation-settings: 'wdth' 100;
+}
+
+@font-face {
+  font-family: 'Inconsolata';
+  src: url('../assets/fonts/Inconsolata-ExtraBold.woff2') format('woff2');
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+  font-variation-settings: 'wdth' 100;
+}
+
+html {
+  font-size: 16px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --fw-normal: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+  --fw-extrabold: 800;
+  --font-family: 'Inconsolata', monospace;
+
+  --color-neutral-100: hsl(0, 0%, 100%);
+  --color-neutral-300: hsl(252, 6%, 83%);
+  --color-neutral-500: hsl(245, 15%, 58%);
+  --color-neutral-700: hsl(245, 19%, 35%);
+  --color-neutral-900: hsl(248, 70%, 10%);
+
+  --color-orange-500: hsl(7, 88%, 67%);
+  --color-orange-700: hsl(7, 71%, 60%);
+  --color-orange-gradient: linear-gradient(
+    90deg,
+    hsl(7, 86%, 67%) 0%,
+    hsl(0, 0%, 100%) 100%
+  );
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1.125rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.375rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.5rem;
+  --text-5xl: 3.75rem;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-family: var(--font-family);
+  line-height: 1;
+  letter-spacing: 0;
+}
