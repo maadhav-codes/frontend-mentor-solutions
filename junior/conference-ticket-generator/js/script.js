@@ -8,6 +8,7 @@ const previewAvatar = document.getElementById('uploaded-avatar');
 
 const removeBtn = document.querySelector('.remove-btn');
 const changeBtn = document.querySelector('.change-btn');
+const uploadBox = document.querySelector('.upload-box');
 
 const MAX_FILE_SIZE = 500 * 1024; // 500KB
 const ALLOWED_TYPES = ['image/jpeg', 'image/png'];
@@ -50,7 +51,10 @@ function validateFile(file) {
   }
 
   if (file.size > MAX_FILE_SIZE) {
-    showError(avatarInput, 'File too large. Please upload a photo under 500KB.');
+    showError(
+      avatarInput,
+      'File too large. Please upload a photo under 500KB.',
+    );
     return false;
   }
   return true;
@@ -80,13 +84,12 @@ function validateForm(fullName, email, githubUsername) {
   return isValid;
 }
 
-avatarInput.addEventListener('change', function (event) {
-  const file = event.target.files[0];
-  const inputGroup = event.target.closest('.input-group');
+function handleFile(file) {
+  if (!file) return;
+
+  const inputGroup = uploadBox.closest('.input-group');
 
   if (inputGroup) inputGroup.classList.remove('avatar-uploaded');
-
-  if (!file) return;
 
   const isFileValid = validateFile(file);
 
@@ -95,10 +98,29 @@ avatarInput.addEventListener('change', function (event) {
     previewAvatar.src = reader.result;
     if (isFileValid && inputGroup) {
       inputGroup.classList.add('avatar-uploaded');
+      const dataTransfer = new DataTransfer();
+      dataTransfer.items.add(file);
+      avatarInput.files = dataTransfer.files;
     }
   };
 
   reader.readAsDataURL(file);
+}
+
+avatarInput.addEventListener('change', (event) => {
+  const file = event.target.files[0];
+  handleFile(file);
+});
+
+uploadBox.addEventListener('dragover', (e) => {
+  e.preventDefault();
+});
+
+uploadBox.addEventListener('drop', (e) => {
+  e.preventDefault();
+
+  const file = e.dataTransfer.files[0];
+  handleFile(file);
 });
 
 removeBtn.addEventListener('click', () => {
