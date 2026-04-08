@@ -5,7 +5,6 @@
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-  font-variation-settings: 'wdth' 100;
 }
 
 @font-face {
@@ -15,7 +14,6 @@
   font-weight: 500;
   font-style: normal;
   font-display: swap;
-  font-variation-settings: 'wdth' 100;
 }
 
 @font-face {
@@ -25,7 +23,6 @@
   font-weight: 700;
   font-style: normal;
   font-display: swap;
-  font-variation-settings: 'wdth' 100;
 }
 
 @font-face {
@@ -35,14 +32,15 @@
   font-weight: 800;
   font-style: normal;
   font-display: swap;
-  font-variation-settings: 'wdth' 100;
 }
 
 html {
   font-size: 16px;
 }
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -76,22 +74,21 @@ html {
 }
 
 body {
-  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
   align-items: center;
-
   font-family: var(--font-family);
   line-height: 1.2;
-  letter-spacing: 0;
-
-  background: url(../assets/images/background-mobile.png) no-repeat center top;
-  background-size: cover;
+  background: url(../assets/images/background-mobile.png) no-repeat center top /
+    cover;
+  color: var(--color-neutral-100);
 }
 
 img {
   max-width: 100%;
   height: auto;
+  display: block;
 }
 
 .container {
@@ -102,6 +99,7 @@ img {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
+  flex: 1;
 }
 
 .logo img {
@@ -117,6 +115,13 @@ img {
   gap: 2.5rem;
 }
 
+.ticket-generated {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4.5rem;
+}
+
 .header {
   text-align: center;
 }
@@ -125,9 +130,20 @@ img {
   font-size: var(--text-3xl);
   font-weight: var(--fw-extrabold);
   line-height: 1.1;
-  letter-spacing: -0.0625rem;
+  letter-spacing: -1px;
   color: var(--color-neutral-100);
   margin-bottom: 1.25rem;
+}
+
+.ticket-generated .text-gradient {
+  background-image: linear-gradient(
+    90deg,
+    var(--color-orange-500) 0%,
+    var(--color-neutral-100) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .header p {
@@ -136,6 +152,10 @@ img {
   line-height: 1.2;
   letter-spacing: -0.5px;
   color: var(--color-neutral-300);
+}
+
+.ticket-generated .text-color {
+  color: var(--color-orange-500);
 }
 
 form {
@@ -373,10 +393,125 @@ form {
   text-underline-position: from-font;
 }
 
+.ticket-generator {
+  display: none;
+}
+
+.ticket-box {
+  width: 100%;
+  max-width: 22rem;
+  aspect-ratio: 2.14 / 1;
+  padding: 1rem;
+
+  background: url('../assets/images/pattern-ticket.svg') no-repeat center /
+    cover;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.ticket-event {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.ticket-event img {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+.ticket-event-details {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.ticket-event-details h2 {
+  font-size: var(--text-2xl);
+  font-weight: var(--fw-bold);
+  line-height: 1.1;
+  letter-spacing: -1px;
+  color: var(--color-neutral-100);
+}
+
+.ticket-event-details p {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  font-size: var(--text-sm);
+  font-weight: var(--fw-normal);
+  line-height: 1.2;
+  color: var(--color-neutral-300);
+}
+
+.ticket-attendee {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.ticket-attendee img {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 0.5rem;
+}
+
+.attendee-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.attendee-info h3 {
+  font-size: var(--text-lg);
+  font-weight: var(--fw-medium);
+  line-height: 1.1;
+  letter-spacing: -1px;
+  color: var(--color-neutral-100);
+}
+
+.github-handle {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  align-self: stretch;
+}
+
+.github-handle img {
+  width: 1rem;
+  height: 1rem;
+}
+
+.github-handle p {
+  font-size: var(--text-sm);
+  font-weight: var(--fw-normal);
+  line-height: 1.2;
+  color: var(--color-neutral-300);
+}
+
+.ticket-number {
+  font-size: var(--text-xl);
+  font-weight: var(--fw-medium);
+  line-height: 1.1;
+  letter-spacing: -1px;
+  color: var(--color-neutral-500);
+
+  position: absolute;
+  right: -2px;
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg);
+}
+
 @media (min-width: 768px) {
   body {
-    background: url(../assets/images/background-tablet.png) no-repeat center top;
-    background-size: cover;
+    background: url(../assets/images/background-tablet.png) no-repeat center
+      top / cover;
   }
 
   .container {
@@ -393,6 +528,10 @@ form {
     gap: 2.875rem;
   }
 
+  .ticket-generated {
+    gap: 5rem;
+  }
+
   .header h1 {
     font-size: var(--text-5xl);
   }
@@ -400,16 +539,92 @@ form {
   .header p {
     font-size: var(--text-2xl);
   }
+
+  .ticket-generated .header h1 {
+    margin-bottom: 2rem;
+  }
+
+  .ticket-generated .header p {
+    max-width: 32rem;
+    margin-inline: auto;
+  }
+
+  .ticket-box {
+    max-width: 37.5rem;
+    padding: 1.5rem;
+    padding-right: 2.25rem;
+  }
+
+  .ticket-event {
+    gap: 1.25rem;
+  }
+
+  .ticket-event img {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .ticket-event-details {
+    gap: 0.75rem;
+  }
+
+  .ticket-event-details h2 {
+    font-size: var(--text-4xl);
+  }
+
+  .ticket-event-details p {
+    font-size: var(--text-base);
+    gap: 1rem;
+  }
+
+  .ticket-attendee {
+    gap: 1rem;
+  }
+
+  .ticket-attendee img {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .attendee-info {
+    gap: 0.5rem;
+  }
+
+  .attendee-info h3 {
+    font-size: var(--text-3xl);
+  }
+
+  .github-handle {
+    gap: 0.625rem;
+  }
+
+  .github-handle img {
+    width: 1.375rem;
+    height: 1.375rem;
+  }
+
+  .github-handle p {
+    font-size: var(--text-lg);
+    font-weight: var(--fw-medium);
+  }
+
+  .ticket-number {
+    right: 0.5rem;
+    font-size: var(--text-3xl);
+  }
 }
 
 @media (min-width: 1280px) {
   body {
     background: url(../assets/images/background-desktop.png) no-repeat center
-      top;
-    background-size: cover;
+      top / cover;
   }
 
   form {
     max-width: 28.75rem;
+  }
+
+  .ticket-generated {
+    gap: 7rem;
   }
 }
