@@ -1,5 +1,6 @@
 import { validateFile, validateForm } from './validator.js';
 import { clearAllErrors } from './helper.js';
+import { showGeneratedTicket } from './generate-ticket.js';
 
 const form = document.getElementById('ticket-form');
 
@@ -87,6 +88,6 @@ form.addEventListener('submit', function (event) {
   const fileIsValid = validateFile(formData.avatarFile, avatarInput);
 
   if (formIsValid && fileIsValid) {
-    console.log('Form submitted successfully!');
+    showGeneratedTicket(formData);
   }
 });

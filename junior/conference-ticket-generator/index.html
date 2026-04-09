@@ -63,7 +63,7 @@
             </div>
 
             <div class="uploaded-box">
-              <img src="" alt="Your uploaded avatar" id="uploaded-avatar" />
+              <img src="" alt="" id="uploaded-avatar" />
 
               <div class="btn-group">
                 <button type="button" class="remove-btn">Remove image</button>
@@ -165,63 +165,55 @@
         </form>
       </section>
 
-      <section class="ticket-generated">
-        <header class="header">
-          <h1>
-            Congrats,
-            <span class="text-gradient">Jonatan</span>
-            <span class="text-gradient">Kristof</span>! Your ticket is ready.
-          </h1>
-          <p>
-            We've emailed your ticket to
-            <span class="text-color">jonatan@email.com</span> and will send
-            updates in the run up to the event.
-          </p>
-        </header>
+      <template id="ticket-template">
+        <section class="ticket-generated">
+          <header class="header">
+            <h1></h1>
+            <p></p>
+          </header>
 
-        <article class="ticket-box" aria-labelledby="ticket-title">
-          <div class="ticket-event">
-            <img
-              src="./assets/images/logo-mark.svg"
-              alt="Coding Conf logo"
-              width="40"
-              height="40"
-            />
+          <article class="ticket-box" aria-labelledby="ticket-title">
+            <div class="ticket-event">
+              <img
+                src="./assets/images/logo-mark.svg"
+                alt="Coding Conf logo"
+                width="40"
+                height="40"
+              />
 
-            <div class="ticket-event-details">
-              <h2 id="ticket-title">Coding Conf</h2>
-              <p>
-                <time datetime="2025-01-31">Jan 31, 2025</time>
-                / Austin, TX
-              </p>
-            </div>
-          </div>
-
-          <div class="ticket-attendee">
-            <img
-              src="./assets/images/image-avatar.jpg"
-              alt="Profile picture of Jonatan Kristof"
-              width="160"
-              height="160"
-            />
-
-            <div class="attendee-info">
-              <h3>Jonatan Kristof</h3>
-              <div class="github-handle">
-                <img
-                  src="./assets/images/icon-github.svg"
-                  alt="GitHub icon"
-                  width="22"
-                  height="22"
-                />
-                <p>@jonatankristof0101</p>
+              <div class="ticket-event-details">
+                <h2 id="ticket-title">Coding Conf</h2>
+                <p>
+                  <time datetime="2025-01-31">Jan 31, 2025</time> / Austin, TX
+                </p>
               </div>
             </div>
-          </div>
 
-          <div class="ticket-number" aria-label="Ticket number">#01609</div>
-        </article>
-      </section>
+            <div class="ticket-attendee">
+              <img id="ticket-avatar" src="" alt="" width="160" height="160" />
+
+              <div class="attendee-info">
+                <h3 id="ticket-name"></h3>
+                <div class="github-handle">
+                  <img
+                    src="./assets/images/icon-github.svg"
+                    alt="GitHub icon"
+                    width="22"
+                    height="22"
+                  />
+                  <p id="ticket-github"></p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="ticket-number"
+              aria-label="Ticket number"
+              id="ticket-number"
+            ></div>
+          </article>
+        </section>
+      </template>
     </div>
 
     <script type="module" src="./js/script.js"></script>

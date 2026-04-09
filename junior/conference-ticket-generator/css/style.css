@@ -393,10 +393,6 @@ form {
   text-underline-position: from-font;
 }
 
-.ticket-generated {
-  display: none;
-}
-
 .ticket-box {
   width: 100%;
   max-width: 22rem;
