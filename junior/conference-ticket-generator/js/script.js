@@ -24,9 +24,8 @@ function handleAvatarUpload(file) {
 
   const reader = new FileReader();
   reader.onload = () => {
-    previewAvatar.src = reader.result;
-
     if (isValid && inputGroup) {
+      previewAvatar.src = reader.result;
       inputGroup.classList.add('avatar-uploaded');
 
       const dataTransfer = new DataTransfer();
@@ -45,6 +44,11 @@ avatarInput.addEventListener('change', (event) => {
 
 uploadBox.addEventListener('dragover', (e) => {
   e.preventDefault();
+  uploadBox.classList.add('dragover');
+});
+
+uploadBox.addEventListener('dragleave', () => {
+  uploadBox.classList.remove('dragover');
 });
 
 uploadBox.addEventListener('drop', (e) => {
@@ -76,7 +80,7 @@ form.addEventListener('submit', function (event) {
     email: emailInput.value.trim(),
     githubUsername: githubInput.value.trim(),
     avatarFile: avatarInput.files[0],
-    previewAvatar: previewAvatar,
+    previewAvatar: previewAvatar.src,
   };
 
   const formIsValid = validateForm(

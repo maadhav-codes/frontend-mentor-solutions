@@ -33,12 +33,12 @@ export function validateForm(
 ) {
   let isValid = true;
 
-  if (!fullName.trim()) {
+  if (!fullName) {
     showError(nameInput, 'Please enter your full name.');
     isValid = false;
   }
 
-  if (!email.trim()) {
+  if (!email) {
     showError(emailInput, 'Please enter your email address.');
     isValid = false;
   } else if (!isValidEmail(email)) {
@@ -46,7 +46,7 @@ export function validateForm(
     isValid = false;
   }
 
-  if (!githubUsername.trim()) {
+  if (!githubUsername) {
     showError(githubInput, 'Please enter your GitHub username.');
     isValid = false;
   }

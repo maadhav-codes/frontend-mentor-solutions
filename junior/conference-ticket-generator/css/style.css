@@ -286,15 +286,13 @@ form {
 .input-group input:focus,
 .input-group input:focus-visible,
 .upload-box:focus,
-.upload-box:focus-visible {
+.upload-box:focus-visible,
+.upload-box.dragover {
   outline: 2px solid var(--color-neutral-500);
   outline-offset: 2px;
 }
 
-.input-group label:focus,
-.input-group label:focus-visible {
-  outline: none;
-}
+
 
 .error-state input {
   border-color: var(--color-orange-500);
@@ -327,6 +325,7 @@ form {
 }
 
 .upload-box:hover,
+.upload-box.dragover,
 .input-group input:hover {
   background-color: hsla(0, 0%, 100%, 0.2);
 }

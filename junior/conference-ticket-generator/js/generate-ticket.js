@@ -12,35 +12,40 @@ export function showGeneratedTicket({
 
   const ticketClone = template.content.cloneNode(true);
 
-  const headerH1 = ticketClone.querySelector('.header h1');
-  const headerP = ticketClone.querySelector('.header p');
+  const ticketHeading = ticketClone.querySelector('#ticket-heading');
+  const ticketDescription = ticketClone.querySelector('#ticket-description');
   const attendeeImg = ticketClone.querySelector('#ticket-avatar');
   const attendeeName = ticketClone.querySelector('#ticket-name');
   const githubHandle = ticketClone.querySelector('#ticket-github');
   const ticketNumberEl = ticketClone.querySelector('#ticket-number');
 
+  const fragment = document.createDocumentFragment();
+
   // Split name for gradient effect
   const nameParts = fullName.trim().split(' ');
-  const firstName = nameParts[0];
-  const lastName = nameParts.slice(1).join(' ');
 
   // Generate random ticket number
   const ticketNumber = '#' + Math.floor(10000 + Math.random() * 90000);
 
-  headerH1.innerHTML = `
-    Congrats, 
-    <span class="text-gradient">${firstName}</span>
-    ${lastName ? `<span class="text-gradient">${lastName}</span>` : ''}! 
-    Your ticket is ready.
-  `;
+  nameParts.forEach((part, index) => {
+    const span = document.createElement('span');
+    span.textContent = part;
+    span.classList.add('text-gradient');
+    fragment.appendChild(span);
 
-  headerP.innerHTML = `
-    We've emailed your ticket to 
-    <span class="text-color">${email}</span> 
-    and will send updates in the run up to the event.
-  `;
+    if (index < nameParts.length - 1) {
+      fragment.appendChild(document.createTextNode(' '));
+    }
+  });
 
-  attendeeImg.src = previewAvatar.src;
+  ticketHeading.appendChild(fragment);
+
+  const emailSpan = document.createElement('span');
+  emailSpan.textContent = email;
+  emailSpan.classList.add('text-color');
+  ticketDescription.appendChild(emailSpan);
+
+  attendeeImg.src = previewAvatar;
   attendeeImg.alt = `Profile picture of ${fullName}`;
 
   attendeeName.textContent = fullName;
