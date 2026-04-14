@@ -80,8 +80,16 @@ body {
   align-items: center;
   font-family: var(--font-family);
   line-height: 1.2;
-  background: url(../assets/images/background-mobile.png) no-repeat center top /
-    cover;
+
+  background:
+    url(../assets/images/pattern-circle.svg) -1.25rem -1.875rem / 6.75rem
+      no-repeat,
+    url(../assets/images/pattern-squiggly-line-top.svg) right 1.5rem / 7rem
+      no-repeat,
+    url(../assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg) left
+      bottom / 18.75rem no-repeat,
+    url(../assets/images/pattern-lines.svg) top center / cover no-repeat,
+    url(../assets/images/background-mobile.png) center top / cover no-repeat;
   color: var(--color-neutral-100);
 }
 
@@ -300,8 +308,6 @@ form {
   outline: 2px solid var(--color-neutral-500);
   outline-offset: 2px;
 }
-
-
 
 .error-state input {
   border-color: var(--color-orange-500);
@@ -524,8 +530,15 @@ input,
 
 @media (min-width: 768px) {
   body {
-    background: url(../assets/images/background-tablet.png) no-repeat center
-      top / cover;
+    background:
+      url(../assets/images/pattern-circle.svg) -1.75rem -5.5rem / 13.5rem
+        no-repeat,
+      url(../assets/images/pattern-squiggly-line-top.svg) right 5.5rem / 14.5rem
+        no-repeat,
+      url(../assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg) left
+        bottom / 24.75rem no-repeat,
+      url(../assets/images/pattern-lines.svg) top center / cover no-repeat,
+      url(../assets/images/background-tablet.png) center top / cover no-repeat;
   }
 
   .container {
@@ -630,8 +643,16 @@ input,
 
 @media (min-width: 1280px) {
   body {
-    background: url(../assets/images/background-desktop.png) no-repeat center
-      top / cover;
+    background:
+      url(../assets/images/pattern-circle.svg) 2.75rem -5.25rem / 13.5rem
+        no-repeat,
+      url(../assets/images/pattern-circle.svg) 80% 70% / 13.5rem no-repeat,
+      url(../assets/images/pattern-squiggly-line-top.svg) right 4.75rem /
+        27.75rem no-repeat,
+      url(../assets/images/pattern-squiggly-line-bottom-desktop.svg) left
+        bottom / 51.5rem no-repeat,
+      url(../assets/images/pattern-lines.svg) top center / cover no-repeat,
+      url(../assets/images/background-tablet.png) center top / cover no-repeat;
   }
 
   form {
