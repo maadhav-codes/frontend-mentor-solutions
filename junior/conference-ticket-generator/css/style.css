@@ -191,7 +191,15 @@ form {
 }
 
 .upload-box input[type='file'] {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
 .upload-box-label,
@@ -287,6 +295,7 @@ form {
 .input-group input:focus-visible,
 .upload-box:focus,
 .upload-box:focus-visible,
+.upload-box:focus-within,
 .upload-box.dragover {
   outline: 2px solid var(--color-neutral-500);
   outline-offset: 2px;
@@ -325,12 +334,14 @@ form {
 }
 
 .upload-box:hover,
+.upload-box:focus-within,
 .upload-box.dragover,
 .input-group input:hover {
   background-color: hsla(0, 0%, 100%, 0.2);
 }
 
-.upload-box:hover .upload-box-label .icon {
+.upload-box:hover .upload-box-label .icon,
+.upload-box:focus-within .upload-box-label .icon {
   border-color: var(--color-neutral-500);
 }
 
@@ -501,6 +512,14 @@ form {
   right: -2px;
   top: 50%;
   transform: translateY(-50%) rotate(90deg);
+}
+
+input,
+.upload-box,
+.upload-box-label .icon,
+.generate-ticket-btn,
+.btn-group button {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @media (min-width: 768px) {

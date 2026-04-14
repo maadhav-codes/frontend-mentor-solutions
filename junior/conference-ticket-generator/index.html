@@ -18,7 +18,7 @@
   </head>
 
   <body>
-    <div class="container">
+    <main class="container">
       <div class="logo">
         <img
           src="./assets/images/logo-full.svg"
@@ -46,6 +46,8 @@
                 name="avatar"
                 id="avatar-upload"
                 accept="image/jpeg, image/png"
+                required
+                aria-describedby="avatar-error"
               />
 
               <label for="avatar-upload" class="upload-box-label">
@@ -82,7 +84,7 @@
               <p>Upload your photo (JPG or PNG, max size: 500KB).</p>
             </div>
 
-            <div class="error-info">
+            <div class="error-info" aria-live="polite">
               <img
                 src="./assets/images/icon-info-error.svg"
                 alt=""
@@ -90,7 +92,7 @@
                 height="16"
                 role="presentation"
               />
-              <p></p>
+              <p id="avatar-error"></p>
             </div>
           </div>
 
@@ -101,9 +103,11 @@
               name="full-name"
               id="full-name"
               placeholder="Enter your full name"
+              required
+              aria-describedby="name-error"
             />
 
-            <div class="error-info">
+            <div class="error-info" aria-live="polite">
               <img
                 src="./assets/images/icon-info-error.svg"
                 alt=""
@@ -111,7 +115,7 @@
                 height="16"
                 role="presentation"
               />
-              <p></p>
+              <p id="name-error"></p>
             </div>
           </div>
 
@@ -122,9 +126,11 @@
               name="email"
               id="email"
               placeholder="example@email.com"
+              required
+              aria-describedby="email-error"
             />
 
-            <div class="error-info">
+            <div class="error-info" aria-live="polite">
               <img
                 src="./assets/images/icon-info-error.svg"
                 alt=""
@@ -132,7 +138,7 @@
                 height="16"
                 role="presentation"
               />
-              <p></p>
+              <p id="email-error"></p>
             </div>
           </div>
 
@@ -145,9 +151,11 @@
               name="github-username"
               id="github-username"
               placeholder="@yourusername"
+              required
+              aria-describedby="github-error"
             />
 
-            <div class="error-info">
+            <div class="error-info" aria-live="polite">
               <img
                 src="./assets/images/icon-info-error.svg"
                 alt=""
@@ -155,7 +163,7 @@
                 height="16"
                 role="presentation"
               />
-              <p></p>
+              <p id="github-error"></p>
             </div>
           </div>
 
@@ -220,7 +228,7 @@
           </article>
         </section>
       </template>
-    </div>
+    </main>
 
     <script type="module" src="./js/script.js"></script>
   </body>

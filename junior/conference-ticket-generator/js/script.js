@@ -26,6 +26,7 @@ function handleAvatarUpload(file) {
   reader.onload = () => {
     if (isValid && inputGroup) {
       previewAvatar.src = reader.result;
+      previewAvatar.alt = "Uploaded avatar preview";
       inputGroup.classList.add('avatar-uploaded');
 
       const dataTransfer = new DataTransfer();

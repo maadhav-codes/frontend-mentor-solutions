@@ -46,7 +46,7 @@ export function showGeneratedTicket({
   ticketDescription.appendChild(emailSpan);
 
   attendeeImg.src = previewAvatar;
-  attendeeImg.alt = `Profile picture of ${fullName}`;
+  attendeeImg.alt = `${fullName}'s uploaded avatar`;
 
   attendeeName.textContent = fullName;
 
