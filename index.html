@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Frontend Mentor solutions — Mayur Dayal</title>
-<meta name="description" content="Frontend Mentor challenge solutions, each with a live demo and its original git history.">
+<meta name="description" content="Frontend Mentor challenge solutions grouped by difficulty, each with a live demo and its original git history.">
 <style>
   :root {
     --bg: #f6f7f9; --card: #fff; --ink: #16181d; --muted: #6b7280;
@@ -21,11 +21,15 @@
   }
   .wrap { max-width: 1080px; margin: 0 auto; padding: 56px 20px 72px; }
   header h1 { margin: 0 0 8px; font-size: clamp(1.6rem, 3vw, 2.1rem); letter-spacing: -.02em; }
-  header p { margin: 0; color: var(--muted); max-width: 60ch; }
-  header a { color: var(--accent); text-decoration: none; }
-  header a:hover { text-decoration: underline; }
+  header p { margin: 0; color: var(--muted); max-width: 62ch; }
+  header a, footer a { color: var(--accent); text-decoration: none; }
+  header a:hover, footer a:hover { text-decoration: underline; }
+  .tiers { margin-top: 40px; display: flex; flex-direction: column; gap: 40px; }
+  .tier-head { display: flex; align-items: baseline; gap: 10px; margin-bottom: 14px; }
+  .tier-head h2 { margin: 0; font-size: 1.15rem; letter-spacing: -.01em; }
+  .tier-head .count { color: var(--muted); font-size: .85rem; }
   .grid {
-    margin-top: 36px; display: grid; gap: 14px;
+    display: grid; gap: 14px;
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   }
   .card {
@@ -34,15 +38,14 @@
     transition: border-color .15s ease, transform .15s ease;
   }
   .card:hover { border-color: var(--accent); transform: translateY(-2px); }
-  .card h2 { margin: 0; font-size: 1rem; line-height: 1.3; font-weight: 600; }
-  .card h2 a { color: inherit; text-decoration: none; }
-  .card h2 a:hover { color: var(--accent); }
+  .card h3 { margin: 0; font-size: 1rem; line-height: 1.3; font-weight: 600; }
+  .card h3 a { color: inherit; text-decoration: none; }
+  .card h3 a:hover { color: var(--accent); }
   .meta { color: var(--muted); font-size: .82rem; }
   .row { margin-top: auto; display: flex; gap: 14px; font-size: .85rem; }
   .row a { color: var(--accent); text-decoration: none; }
   .row a:hover { text-decoration: underline; }
   footer { margin-top: 44px; color: var(--muted); font-size: .85rem; }
-  footer a { color: var(--accent); text-decoration: none; }
 </style>
 </head>
 <body>
@@ -50,187 +53,197 @@
   <header>
     <h1>Frontend Mentor solutions</h1>
     <p>
-      35 challenges built one day at a time, each keeping its original commit history.
-      Source: <a href="https://github.com/maadhav-codes/frontend-mentor-solutions">github.com/maadhav-codes/frontend-mentor-solutions</a>
+      35 challenges built one day at a time, grouped by difficulty, each keeping its original
+      commit history. Source: <a href="https://github.com/maadhav-codes/frontend-mentor-solutions">github.com/maadhav-codes/frontend-mentor-solutions</a>
     </p>
   </header>
-  <main class="grid">
-    <article class="card">
-      <h2><a href="./advice-generator/">Advice generator app</a></h2>
-      <span class="meta">May 2025</span>
-      <div class="row"><a href="./advice-generator/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/advice-generator">Code</a></div>
-    </article>
-    <article class="card">
-      <h2><a href="./age-calculator/">Age calculator app</a></h2>
-      <span class="meta">May 2025</span>
-      <div class="row"><a href="./age-calculator/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/age-calculator">Code</a></div>
-    </article>
-    <article class="card">
-      <h2><a href="./article-preview-component/">Article preview component</a></h2>
-      <span class="meta">Apr 2025</span>
-      <div class="row"><a href="./article-preview-component/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/article-preview-component">Code</a></div>
-    </article>
-    <article class="card">
-      <h2><a href="./base-apparel-coming-soon-page/">Base Apparel coming soon page</a></h2>
-      <span class="meta">Apr 2025</span>
-      <div class="row"><a href="./base-apparel-coming-soon-page/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/base-apparel-coming-soon-page">Code</a></div>
-    </article>
-    <article class="card">
-      <h2><a href="./bento-grid/">Bento grid</a></h2>
-      <span class="meta">Feb 2026</span>
-      <div class="row"><a href="./bento-grid/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/bento-grid">Code</a></div>
-    </article>
-    <article class="card">
-      <h2><a href="./blog-preview-card/">Blog preview card</a></h2>
-      <span class="meta">Apr 2025</span>
-      <div class="row"><a href="./blog-preview-card/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/blog-preview-card">Code</a></div>
-    </article>
-    <article class="card">
-      <h2><a href="./clipboard-landing-page/">Clipboard landing page</a></h2>
-      <span class="meta">May 2025</span>
-      <div class="row"><a href="./clipboard-landing-page/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/clipboard-landing-page">Code</a></div>
-    </article>
-    <article class="card">
-      <h2><a href="./column-preview-card/">3-column preview card component</a></h2>
-      <span class="meta">Apr 2025</span>
-      <div class="row"><a href="./column-preview-card/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/column-preview-card">Code</a></div>
-    </article>
-    <article class="card">
-      <h2><a href="./conference-ticket-generator/">Conference ticket generator</a></h2>
-      <span class="meta">Apr 2026</span>
-      <div class="row"><a href="./conference-ticket-generator/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/conference-ticket-generator">Code</a></div>
-    </article>
-    <article class="card">
-      <h2><a href="./contact-form/">Contact form</a></h2>
-      <span class="meta">Feb 2026</span>
-      <div class="row"><a href="./contact-form/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/contact-form">Code</a></div>
-    </article>
-    <article class="card">
-      <h2><a href="./faq-accordion/">FAQ accordion</a></h2>
-      <span class="meta">Apr 2025</span>
-      <div class="row"><a href="./faq-accordion/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/faq-accordion">Code</a></div>
-    </article>
-    <article class="card">
-      <h2><a href="./four-card-feature-section/">Four card feature section</a></h2>
-      <span class="meta">Apr 2025</span>
-      <div class="row"><a href="./four-card-feature-section/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/four-card-feature-section">Code</a></div>
-    </article>
-    <article class="card">
-      <h2><a href="./fylo-data-storage-component/">Fylo data storage component</a></h2>
-      <span class="meta">May 2025</span>
-      <div class="row"><a href="./fylo-data-storage-component/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/fylo-data-storage-component">Code</a></div>
-    </article>
-    <article class="card">
-      <h2><a href="./huddle-landing-page-with-a-single-introductory/">huddle-landing-page-with-a-single-introductory</a></h2>
-      <span class="meta">Apr 2025</span>
-      <div class="row"><a href="./huddle-landing-page-with-a-single-introductory/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/huddle-landing-page-with-a-single-introductory">Code</a></div>
-    </article>
-    <article class="card">
-      <h2><a href="./interactive-rating-component/">Interactive rating component</a></h2>
-      <span class="meta">Apr 2025</span>
-      <div class="row"><a href="./interactive-rating-component/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/interactive-rating-component">Code</a></div>
-    </article>
-    <article class="card">
-      <h2><a href="./intro-component-with-signup-form/">Intro component with sign up form</a></h2>
-      <span class="meta">Apr 2025</span>
-      <div class="row"><a href="./intro-component-with-signup-form/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/intro-component-with-signup-form">Code</a></div>
-    </article>
-    <article class="card">
-      <h2><a href="./intro-section-with-dropdown-navigation/">Intro section with dropdown navigation</a></h2>
-      <span class="meta">May 2025</span>
-      <div class="row"><a href="./intro-section-with-dropdown-navigation/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/intro-section-with-dropdown-navigation">Code</a></div>
-    </article>
-    <article class="card">
-      <h2><a href="./news-homepage/">News homepage</a></h2>
-      <span class="meta">May 2025</span>
-      <div class="row"><a href="./news-homepage/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/news-homepage">Code</a></div>
-    </article>
-    <article class="card">
-      <h2><a href="./newsletter-signup-form/">newsletter-signup-form</a></h2>
-      <span class="meta">May 2025</span>
-      <div class="row"><a href="./newsletter-signup-form/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/newsletter-signup-form">Code</a></div>
-    </article>
-    <article class="card">
-      <h2><a href="./nft-preview-card-component/">NFT preview card component</a></h2>
-      <span class="meta">Apr 2025</span>
-      <div class="row"><a href="./nft-preview-card-component/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/nft-preview-card-component">Code</a></div>
-    </article>
-    <article class="card">
-      <h2><a href="./order-summary-component/">Order summary card</a></h2>
-      <span class="meta">Apr 2025</span>
-      <div class="row"><a href="./order-summary-component/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/order-summary-component">Code</a></div>
-    </article>
-    <article class="card">
-      <h2><a href="./ping-single-column-coming-soon-page/">Ping coming soon page</a></h2>
-      <span class="meta">Apr 2025</span>
-      <div class="row"><a href="./ping-single-column-coming-soon-page/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/ping-single-column-coming-soon-page">Code</a></div>
-    </article>
-    <article class="card">
-      <h2><a href="./pricing-component-with-toggle/">Pricing component with toggle</a></h2>
-      <span class="meta">Feb 2026</span>
-      <div class="row"><a href="./pricing-component-with-toggle/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/pricing-component-with-toggle">Code</a></div>
-    </article>
-    <article class="card">
-      <h2><a href="./product-preview-card-component/">Product preview card component</a></h2>
-      <span class="meta">Apr 2025</span>
-      <div class="row"><a href="./product-preview-card-component/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/product-preview-card-component">Code</a></div>
-    </article>
-    <article class="card">
-      <h2><a href="./profile-card-component/">Profile card component</a></h2>
-      <span class="meta">Apr 2025</span>
-      <div class="row"><a href="./profile-card-component/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/profile-card-component">Code</a></div>
-    </article>
-    <article class="card">
-      <h2><a href="./qr-code-component/">QR code component</a></h2>
-      <span class="meta">Apr 2025</span>
-      <div class="row"><a href="./qr-code-component/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/qr-code-component">Code</a></div>
-    </article>
-    <article class="card">
-      <h2><a href="./recipe-page/">Recipe page</a></h2>
-      <span class="meta">Apr 2025</span>
-      <div class="row"><a href="./recipe-page/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/recipe-page">Code</a></div>
-    </article>
-    <article class="card">
-      <h2><a href="./results-summary-component/">Results summary component</a></h2>
-      <span class="meta">Apr 2025</span>
-      <div class="row"><a href="./results-summary-component/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/results-summary-component">Code</a></div>
-    </article>
-    <article class="card">
-      <h2><a href="./single-price-grid-component/">Single Price Grid Component</a></h2>
-      <span class="meta">Apr 2025</span>
-      <div class="row"><a href="./single-price-grid-component/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/single-price-grid-component">Code</a></div>
-    </article>
-    <article class="card">
-      <h2><a href="./social-links-profile/">Social links profile</a></h2>
-      <span class="meta">Apr 2025</span>
-      <div class="row"><a href="./social-links-profile/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/social-links-profile">Code</a></div>
-    </article>
-    <article class="card">
-      <h2><a href="./social-proof-section/">Social proof section</a></h2>
-      <span class="meta">Apr 2025</span>
-      <div class="row"><a href="./social-proof-section/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/social-proof-section">Code</a></div>
-    </article>
-    <article class="card">
-      <h2><a href="./stats-preview-card-component/">Stats preview card component</a></h2>
-      <span class="meta">Apr 2025</span>
-      <div class="row"><a href="./stats-preview-card-component/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/stats-preview-card-component">Code</a></div>
-    </article>
-    <article class="card">
-      <h2><a href="./testimonials-grid-section/">Testimonials grid section</a></h2>
-      <span class="meta">Apr 2025</span>
-      <div class="row"><a href="./testimonials-grid-section/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/testimonials-grid-section">Code</a></div>
-    </article>
-    <article class="card">
-      <h2><a href="./time-tracking-dashboard/">Time tracking dashboard</a></h2>
-      <span class="meta">May 2025</span>
-      <div class="row"><a href="./time-tracking-dashboard/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/time-tracking-dashboard">Code</a></div>
-    </article>
-    <article class="card">
-      <h2><a href="./tip-calculator/">Tip calculator app</a></h2>
-      <span class="meta">May 2025</span>
-      <div class="row"><a href="./tip-calculator/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/tip-calculator">Code</a></div>
-    </article>
-  </main>
+  <div class="tiers">
+    <section>
+      <div class="tier-head"><h2>Newbie</h2><span class="count">21 projects</span></div>
+      <div class="grid">
+        <article class="card">
+          <h3><a href="./newbie/article-preview-component/">Article preview component</a></h3>
+          <span class="meta">Apr 2025</span>
+          <div class="row"><a href="./newbie/article-preview-component/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/newbie/article-preview-component">Code</a></div>
+        </article>
+        <article class="card">
+          <h3><a href="./newbie/base-apparel-coming-soon-page/">Base Apparel coming soon page</a></h3>
+          <span class="meta">Apr 2025</span>
+          <div class="row"><a href="./newbie/base-apparel-coming-soon-page/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/newbie/base-apparel-coming-soon-page">Code</a></div>
+        </article>
+        <article class="card">
+          <h3><a href="./newbie/blog-preview-card/">Blog preview card</a></h3>
+          <span class="meta">Apr 2025</span>
+          <div class="row"><a href="./newbie/blog-preview-card/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/newbie/blog-preview-card">Code</a></div>
+        </article>
+        <article class="card">
+          <h3><a href="./newbie/column-preview-card/">3-column preview card component</a></h3>
+          <span class="meta">Apr 2025</span>
+          <div class="row"><a href="./newbie/column-preview-card/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/newbie/column-preview-card">Code</a></div>
+        </article>
+        <article class="card">
+          <h3><a href="./newbie/faq-accordion/">FAQ accordion</a></h3>
+          <span class="meta">Apr 2025</span>
+          <div class="row"><a href="./newbie/faq-accordion/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/newbie/faq-accordion">Code</a></div>
+        </article>
+        <article class="card">
+          <h3><a href="./newbie/four-card-feature-section/">Four card feature section</a></h3>
+          <span class="meta">Apr 2025</span>
+          <div class="row"><a href="./newbie/four-card-feature-section/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/newbie/four-card-feature-section">Code</a></div>
+        </article>
+        <article class="card">
+          <h3><a href="./newbie/huddle-landing-page-with-a-single-introductory/">huddle-landing-page-with-a-single-introductory</a></h3>
+          <span class="meta">Apr 2025</span>
+          <div class="row"><a href="./newbie/huddle-landing-page-with-a-single-introductory/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/newbie/huddle-landing-page-with-a-single-introductory">Code</a></div>
+        </article>
+        <article class="card">
+          <h3><a href="./newbie/interactive-rating-component/">Interactive rating component</a></h3>
+          <span class="meta">Apr 2025</span>
+          <div class="row"><a href="./newbie/interactive-rating-component/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/newbie/interactive-rating-component">Code</a></div>
+        </article>
+        <article class="card">
+          <h3><a href="./newbie/intro-component-with-signup-form/">Intro component with sign up form</a></h3>
+          <span class="meta">Apr 2025</span>
+          <div class="row"><a href="./newbie/intro-component-with-signup-form/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/newbie/intro-component-with-signup-form">Code</a></div>
+        </article>
+        <article class="card">
+          <h3><a href="./newbie/nft-preview-card-component/">NFT preview card component</a></h3>
+          <span class="meta">Apr 2025</span>
+          <div class="row"><a href="./newbie/nft-preview-card-component/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/newbie/nft-preview-card-component">Code</a></div>
+        </article>
+        <article class="card">
+          <h3><a href="./newbie/order-summary-component/">Order summary card</a></h3>
+          <span class="meta">Apr 2025</span>
+          <div class="row"><a href="./newbie/order-summary-component/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/newbie/order-summary-component">Code</a></div>
+        </article>
+        <article class="card">
+          <h3><a href="./newbie/ping-single-column-coming-soon-page/">Ping coming soon page</a></h3>
+          <span class="meta">Apr 2025</span>
+          <div class="row"><a href="./newbie/ping-single-column-coming-soon-page/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/newbie/ping-single-column-coming-soon-page">Code</a></div>
+        </article>
+        <article class="card">
+          <h3><a href="./newbie/product-preview-card-component/">Product preview card component</a></h3>
+          <span class="meta">Apr 2025</span>
+          <div class="row"><a href="./newbie/product-preview-card-component/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/newbie/product-preview-card-component">Code</a></div>
+        </article>
+        <article class="card">
+          <h3><a href="./newbie/profile-card-component/">Profile card component</a></h3>
+          <span class="meta">Apr 2025</span>
+          <div class="row"><a href="./newbie/profile-card-component/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/newbie/profile-card-component">Code</a></div>
+        </article>
+        <article class="card">
+          <h3><a href="./newbie/qr-code-component/">QR code component</a></h3>
+          <span class="meta">Apr 2025</span>
+          <div class="row"><a href="./newbie/qr-code-component/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/newbie/qr-code-component">Code</a></div>
+        </article>
+        <article class="card">
+          <h3><a href="./newbie/recipe-page/">Recipe page</a></h3>
+          <span class="meta">Apr 2025</span>
+          <div class="row"><a href="./newbie/recipe-page/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/newbie/recipe-page">Code</a></div>
+        </article>
+        <article class="card">
+          <h3><a href="./newbie/results-summary-component/">Results summary component</a></h3>
+          <span class="meta">Apr 2025</span>
+          <div class="row"><a href="./newbie/results-summary-component/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/newbie/results-summary-component">Code</a></div>
+        </article>
+        <article class="card">
+          <h3><a href="./newbie/single-price-grid-component/">Single Price Grid Component</a></h3>
+          <span class="meta">Apr 2025</span>
+          <div class="row"><a href="./newbie/single-price-grid-component/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/newbie/single-price-grid-component">Code</a></div>
+        </article>
+        <article class="card">
+          <h3><a href="./newbie/social-links-profile/">Social links profile</a></h3>
+          <span class="meta">Apr 2025</span>
+          <div class="row"><a href="./newbie/social-links-profile/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/newbie/social-links-profile">Code</a></div>
+        </article>
+        <article class="card">
+          <h3><a href="./newbie/social-proof-section/">Social proof section</a></h3>
+          <span class="meta">Apr 2025</span>
+          <div class="row"><a href="./newbie/social-proof-section/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/newbie/social-proof-section">Code</a></div>
+        </article>
+        <article class="card">
+          <h3><a href="./newbie/stats-preview-card-component/">Stats preview card component</a></h3>
+          <span class="meta">Apr 2025</span>
+          <div class="row"><a href="./newbie/stats-preview-card-component/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/newbie/stats-preview-card-component">Code</a></div>
+        </article>
+      </div>
+    </section>
+    <section>
+      <div class="tier-head"><h2>Junior</h2><span class="count">14 projects</span></div>
+      <div class="grid">
+        <article class="card">
+          <h3><a href="./junior/advice-generator/">Advice generator app</a></h3>
+          <span class="meta">May 2025</span>
+          <div class="row"><a href="./junior/advice-generator/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/junior/advice-generator">Code</a></div>
+        </article>
+        <article class="card">
+          <h3><a href="./junior/age-calculator/">Age calculator app</a></h3>
+          <span class="meta">May 2025</span>
+          <div class="row"><a href="./junior/age-calculator/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/junior/age-calculator">Code</a></div>
+        </article>
+        <article class="card">
+          <h3><a href="./junior/bento-grid/">Bento grid</a></h3>
+          <span class="meta">Feb 2026</span>
+          <div class="row"><a href="./junior/bento-grid/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/junior/bento-grid">Code</a></div>
+        </article>
+        <article class="card">
+          <h3><a href="./junior/clipboard-landing-page/">Clipboard landing page</a></h3>
+          <span class="meta">May 2025</span>
+          <div class="row"><a href="./junior/clipboard-landing-page/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/junior/clipboard-landing-page">Code</a></div>
+        </article>
+        <article class="card">
+          <h3><a href="./junior/conference-ticket-generator/">Conference ticket generator</a></h3>
+          <span class="meta">Apr 2026</span>
+          <div class="row"><a href="./junior/conference-ticket-generator/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/junior/conference-ticket-generator">Code</a></div>
+        </article>
+        <article class="card">
+          <h3><a href="./junior/contact-form/">Contact form</a></h3>
+          <span class="meta">Feb 2026</span>
+          <div class="row"><a href="./junior/contact-form/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/junior/contact-form">Code</a></div>
+        </article>
+        <article class="card">
+          <h3><a href="./junior/fylo-data-storage-component/">Fylo data storage component</a></h3>
+          <span class="meta">May 2025</span>
+          <div class="row"><a href="./junior/fylo-data-storage-component/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/junior/fylo-data-storage-component">Code</a></div>
+        </article>
+        <article class="card">
+          <h3><a href="./junior/intro-section-with-dropdown-navigation/">Intro section with dropdown navigation</a></h3>
+          <span class="meta">May 2025</span>
+          <div class="row"><a href="./junior/intro-section-with-dropdown-navigation/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/junior/intro-section-with-dropdown-navigation">Code</a></div>
+        </article>
+        <article class="card">
+          <h3><a href="./junior/news-homepage/">News homepage</a></h3>
+          <span class="meta">May 2025</span>
+          <div class="row"><a href="./junior/news-homepage/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/junior/news-homepage">Code</a></div>
+        </article>
+        <article class="card">
+          <h3><a href="./junior/newsletter-signup-form/">newsletter-signup-form</a></h3>
+          <span class="meta">May 2025</span>
+          <div class="row"><a href="./junior/newsletter-signup-form/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/junior/newsletter-signup-form">Code</a></div>
+        </article>
+        <article class="card">
+          <h3><a href="./junior/pricing-component-with-toggle/">Pricing component with toggle</a></h3>
+          <span class="meta">Feb 2026</span>
+          <div class="row"><a href="./junior/pricing-component-with-toggle/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/junior/pricing-component-with-toggle">Code</a></div>
+        </article>
+        <article class="card">
+          <h3><a href="./junior/testimonials-grid-section/">Testimonials grid section</a></h3>
+          <span class="meta">Apr 2025</span>
+          <div class="row"><a href="./junior/testimonials-grid-section/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/junior/testimonials-grid-section">Code</a></div>
+        </article>
+        <article class="card">
+          <h3><a href="./junior/time-tracking-dashboard/">Time tracking dashboard</a></h3>
+          <span class="meta">May 2025</span>
+          <div class="row"><a href="./junior/time-tracking-dashboard/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/junior/time-tracking-dashboard">Code</a></div>
+        </article>
+        <article class="card">
+          <h3><a href="./junior/tip-calculator/">Tip calculator app</a></h3>
+          <span class="meta">May 2025</span>
+          <div class="row"><a href="./junior/tip-calculator/">Live demo ↗</a><a href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/junior/tip-calculator">Code</a></div>
+        </article>
+      </div>
+    </section>
+  </div>
   <footer>
     Built with HTML, CSS and vanilla JS · <a href="https://github.com/maadhav-codes/frontend-mentor-solutions">source on GitHub</a>
   </footer>
