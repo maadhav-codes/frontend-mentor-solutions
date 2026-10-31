@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="./assets/images/favicon-32x32.png"
+      type="image/png"
+    />
+    <title>Frontend Mentor | Article preview component</title>
+
+    <!-- Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- Author -->
+    <meta name="author" content="https://github.com/maadhav-codes" />
+  </head>
+
+  <body>
+    <main class="container">
+      <article class="card">
+        <figure>
+          <img
+            src="./assets/images/drawers.jpg"
+            alt="Stylish green drawer furniture against a wall"
+          />
+        </figure>
+
+        <div class="content">
+          <header>
+            <h1>
+              Shift the overall look and feel by adding these wonderful touches
+              to furniture in your home
+            </h1>
+
+            <p>
+              Ever been in a room and felt like something was missing? Perhaps
+              it felt slightly bare and uninviting. I've got some simple tips to
+              help you make any room feel complete.
+            </p>
+          </header>
+
+          <footer>
+            <div class="author_wrapper">
+              <div class="author">
+                <img
+                  src="./assets/images/avatar-michelle.jpg"
+                  alt="Profile photo of Michelle Appleton"
+                />
+
+                <div class="author_info">
+                  <h2>Michelle Appleton</h2>
+                  <time datetime="2020-06-28">28 Jun 2020</time>
+                </div>
+              </div>
+
+              <button
+                type="button"
+                class="share_btn"
+                aria-label="Share this article"
+                aria-expanded="false"
+                aria-controls="share-panel"
+              >
+                <img
+                  src="./assets/images/icon-share.svg"
+                  alt="Share icon"
+                  aria-hidden="true"
+                />
+              </button>
+            </div>
+
+            <div class="share_panel" id="share-panel" aria-hidden="true">
+              <div class="share_content">
+                <span class="panel_label">Share</span>
+
+                <nav class="social_links">
+                  <a href="#facebook" aria-label="Share on Facebook">
+                    <img
+                      src="./assets/images/icon-facebook.svg"
+                      alt="facebook icon"
+                      aria-hidden="true"
+                    />
+                  </a>
+
+                  <a href="#twitter" aria-label="Share on Twitter">
+                    <img
+                      src="./assets/images/icon-twitter.svg"
+                      alt="twitter icon"
+                      aria-hidden="true"
+                    />
+                  </a>
+
+                  <a href="#pininterest" aria-label="Share on Pininterest">
+                    <img
+                      src="./assets/images/icon-pinterest.svg"
+                      alt="pinterest icon"
+                      aria-hidden="true"
+                    />
+                  </a>
+                </nav>
+              </div>
+
+              <button
+                type="button"
+                class="share_btn"
+                aria-label="Close share panel"
+                aria-expanded="true"
+                aria-controls="share-panel"
+              >
+                <img
+                  src="./assets/images/icon-share.svg"
+                  alt="Share icon"
+                  aria-hidden="true"
+                />
+              </button>
+            </div>
+          </footer>
+        </div>
+      </article>
+    </main>
+
+    <script>
+      const sharePanel = document.querySelector(".share_panel");
+      const openSharePanel = document.querySelector(".author_wrapper button");
+      const closeSharePanel = document.querySelector(".share_panel button");
+
+      function toggleSharePanel(close = false) {
+        const isOpen = sharePanel.classList.contains("active");
+
+        const state = close ? false : !isOpen;
+
+        sharePanel.classList.toggle("active", state);
+        openSharePanel.setAttribute("aria-expanded", state);
+        closeSharePanel.setAttribute("aria-expanded", state);
+      }
+
+      // Open Panel on click
+      openSharePanel.addEventListener("click", (e) => {
+        e.stopPropagation();
+        toggleSharePanel();
+      });
+
+      // Close Panel on click
+      closeSharePanel.addEventListener("click", (e) => {
+        e.stopPropagation();
+        toggleSharePanel();
+      });
+
+      // Close panel when clicking outside
+      document.addEventListener("click", (event) => {
+        const isClickedInside =
+          sharePanel.contains(event.target) ||
+          openSharePanel.contains(event.target);
+
+        if (!isClickedInside) {
+          toggleSharePanel(true);
+        }
+      });
+
+      // Keyboard Support
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && sharePanel.classList.contains("active")) {
+          toggleSharePanel(true);
+        }
+      });
+    </script>
+  </body>
+</html>
