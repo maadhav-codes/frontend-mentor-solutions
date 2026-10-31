@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="./assets/images/favicon-32x32.png"
+      type="image/png"
+    />
+    <title>Frontend Mentor | Conference ticket generator</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- Author -->
+    <meta name="author" content="https://github.com/maadhav-codes" />
+  </head>
+
+  <body>
+    <main class="container">
+      <div class="logo">
+        <img
+          src="./assets/images/logo-full.svg"
+          alt="Coding Conf 2025 logo"
+          width="209"
+          height="30"
+        />
+      </div>
+
+      <section class="ticket-generator">
+        <header class="header">
+          <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
+          <p>Secure your spot at next year's biggest coding conference.</p>
+        </header>
+
+        <form id="ticket-form" novalidate>
+          <div class="input-group">
+            <label for="avatar-upload" class="upload-label"
+              >Upload Avatar</label
+            >
+
+            <div class="upload-box">
+              <input
+                type="file"
+                name="avatar"
+                id="avatar-upload"
+                accept="image/jpeg, image/png"
+                required
+                aria-describedby="avatar-error"
+              />
+
+              <label for="avatar-upload" class="upload-box-label">
+                <div class="icon">
+                  <img
+                    src="./assets/images/icon-upload.svg"
+                    alt=""
+                    width="30"
+                    height="30"
+                    role="presentation"
+                  />
+                </div>
+                <span>Drag and drop or click to upload</span>
+              </label>
+            </div>
+
+            <div class="uploaded-box">
+              <img src="" alt="" id="uploaded-avatar" />
+
+              <div class="btn-group">
+                <button type="button" class="remove-btn">Remove image</button>
+                <button type="button" class="change-btn">Change image</button>
+              </div>
+            </div>
+
+            <div class="upload-info">
+              <img
+                src="./assets/images/icon-info.svg"
+                alt=""
+                width="16"
+                height="16"
+                role="presentation"
+              />
+              <p>Upload your photo (JPG or PNG, max size: 500KB).</p>
+            </div>
+
+            <div class="error-info" aria-live="polite">
+              <img
+                src="./assets/images/icon-info-error.svg"
+                alt=""
+                width="16"
+                height="16"
+                role="presentation"
+              />
+              <p id="avatar-error"></p>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="full-name" class="upload-label">Full Name</label>
+            <input
+              type="text"
+              name="full-name"
+              id="full-name"
+              placeholder="Enter your full name"
+              required
+              aria-describedby="name-error"
+            />
+
+            <div class="error-info" aria-live="polite">
+              <img
+                src="./assets/images/icon-info-error.svg"
+                alt=""
+                width="16"
+                height="16"
+                role="presentation"
+              />
+              <p id="name-error"></p>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="email" class="upload-label">Email Address</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="example@email.com"
+              required
+              aria-describedby="email-error"
+            />
+
+            <div class="error-info" aria-live="polite">
+              <img
+                src="./assets/images/icon-info-error.svg"
+                alt=""
+                width="16"
+                height="16"
+                role="presentation"
+              />
+              <p id="email-error"></p>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="github-username" class="upload-label"
+              >GitHub Username</label
+            >
+            <input
+              type="text"
+              name="github-username"
+              id="github-username"
+              placeholder="@yourusername"
+              required
+              aria-describedby="github-error"
+            />
+
+            <div class="error-info" aria-live="polite">
+              <img
+                src="./assets/images/icon-info-error.svg"
+                alt=""
+                width="16"
+                height="16"
+                role="presentation"
+              />
+              <p id="github-error"></p>
+            </div>
+          </div>
+
+          <button type="submit" class="generate-ticket-btn">
+            Generate My Ticket
+          </button>
+        </form>
+      </section>
+
+      <template id="ticket-template">
+        <section class="ticket-generated">
+          <header class="header">
+            <h1>
+              Congrats, <span id="ticket-heading"></span>! Your ticket is ready.
+            </h1>
+            <p>
+              We've emailed your ticket to
+              <span id="ticket-description"></span> and will send updates in the
+              run up to the event.
+            </p>
+          </header>
+
+          <article class="ticket-box" aria-labelledby="ticket-title">
+            <div class="ticket-event">
+              <img
+                src="./assets/images/logo-mark.svg"
+                alt="Coding Conf logo"
+                width="40"
+                height="40"
+              />
+
+              <div class="ticket-event-details">
+                <h2 id="ticket-title">Coding Conf</h2>
+                <p>
+                  <time datetime="2025-01-31">Jan 31, 2025</time> / Austin, TX
+                </p>
+              </div>
+            </div>
+
+            <div class="ticket-attendee">
+              <img id="ticket-avatar" src="" alt="" width="160" height="160" />
+
+              <div class="attendee-info">
+                <h3 id="ticket-name"></h3>
+                <div class="github-handle">
+                  <img
+                    src="./assets/images/icon-github.svg"
+                    alt="GitHub icon"
+                    width="22"
+                    height="22"
+                  />
+                  <p id="ticket-github"></p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="ticket-number"
+              aria-label="Ticket number"
+              id="ticket-number"
+            ></div>
+          </article>
+        </section>
+      </template>
+    </main>
+
+    <script type="module" src="./js/script.js"></script>
+  </body>
+</html>
