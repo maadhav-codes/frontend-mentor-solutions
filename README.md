@@ -1,7 +1,7 @@
 # Frontend Mentor solutions
 
-35 challenges, one repo — 117 original commits preserved, with each project's history intact
-(see `git log -- <project>/`). Every folder is a self-contained static site, served live from GitHub Pages.
+35 challenges in one repo, with every project's original commit history intact
+(`git log -- <project>/`). Each folder is a self-contained static site, served live from GitHub Pages.
 
 | # | Project | Code | Live demo | First commit |
 |--:|---|---|---|---|
@@ -43,6 +43,5 @@
 
 ---
 
-Each directory contains the original project files (`index.html`, `css/`, `js/`, `assets/`). The original `fm-*` repositories are archived, so older links still resolve.
-
-New here? Pick any demo above, or open `<project>/index.html` locally — no build step required.
+The original `fm-*` repositories are archived, so older links keep resolving.
+No build step: open `<project>/index.html`, or run `python3 -m http.server` in the repo root.
