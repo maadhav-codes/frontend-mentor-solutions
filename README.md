@@ -15,3 +15,4 @@
 | 7 | Interactive rating component | [code ↗](./newbie/fm-interactive-rating-component-solution/) | [demo ↗](https://maadhav-codes.github.io/newbie/fm-interactive-rating-component-solution/) | 19 April 2025 | 19 April 2025 |
 | 8 | FAQ accordion | [code ↗](./newbie/fm-faq-accordion-solution/) | [demo ↗](https://maadhav-codes.github.io/newbie/fm-faq-accordion-solution/) | 30 April 2025 | 30 April 2025 |
 | 9 | Article preview component | [code ↗](./newbie/fm-faq-accordion-solution/) | [demo ↗](https://maadhav-codes.github.io/newbie/fm-faq-accordion-solution/) | 24 April 2025 | 25 April 2025 |
+| 10 | Ping coming soon page | [code ↗](./newbie/fm-ping-single-column-coming-soon-page-solution/) | [demo ↗](https://maadhav-codes.github.io/newbie/fm-ping-single-column-coming-soon-page-solution/) | 28 April 2025 | 29 April 2025 |
