@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favicon-32x32.png"
+      type="image/png"
+    />
+    <title>Frontend Mentor | Results summary component</title>
+
+    <!-- Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- Author -->
+    <meta name="author" content="https://github.com/maadhav-codes" />
+  </head>
+
+  <body>
+    <main class="container">
+      <article class="card">
+        <section class="card_header">
+          <h1 class="card_title">Your Result</h1>
+
+          <div class="card_score_circle">
+            <span class="card_score_value">76</span>
+            <span class="card_score_total">of 100</span>
+          </div>
+
+          <div class="card_assessment">
+            <h2 class="card_assessment_title">Great</h2>
+            <p class="card_assessment_description">
+              You scored higher than 65% of the people who have taken these
+              tests.
+            </p>
+          </div>
+        </section>
+
+        <section class="card_summary">
+          <h2 class="card_summary_title">Summary</h2>
+
+          <ul class="card_category_list">
+            <li
+              class="card_category_list_item card_category_list_item_reaction"
+            >
+              <div class="card_category_list_info">
+                <img
+                  src="./assets/images/icon-reaction.svg"
+                  alt="Reaction icon"
+                />
+                <span>Reaction</span>
+              </div>
+
+              <div class="card_category_list_score">
+                <span class="card_category_list_item_value">80</span>
+                <span class="card_category_list_item_separator">/</span>
+                <span class="card_category_list_item_total">100</span>
+              </div>
+            </li>
+
+            <li class="card_category_list_item card_category_list_item_memory">
+              <div class="card_category_list_info">
+                <img src="./assets/images/icon-memory.svg" alt="Memory icon" />
+                <span>Memory</span>
+              </div>
+
+              <div class="card_category_list_score">
+                <span class="card_category_list_item_value">92</span>
+                <span class="card_category_list_item_separator">/</span>
+                <span class="card_category_list_item_total">100</span>
+              </div>
+            </li>
+
+            <li class="card_category_list_item card_category_list_item_verbal">
+              <div class="card_category_list_info">
+                <img src="./assets/images/icon-verbal.svg" alt="Verbal icon" />
+                <span>Verbal</span>
+              </div>
+
+              <div class="card_category_list_score">
+                <span class="card_category_list_item_value">61</span>
+                <span class="card_category_list_item_separator">/</span>
+                <span class="card_category_list_item_total">100</span>
+              </div>
+            </li>
+
+            <li class="card_category_list_item card_category_list_item_visual">
+              <div class="card_category_list_info">
+                <img src="./assets/images/icon-visual.svg" alt="Visual icon" />
+                <span>Visual</span>
+              </div>
+
+              <div class="card_category_list_score">
+                <span class="card_category_list_item_value">72</span>
+                <span class="card_category_list_item_separator">/</span>
+                <span class="card_category_list_item_total">100</span>
+              </div>
+            </li>
+          </ul>
+
+          <button type="button">Continue</button>
+        </section>
+      </article>
+    </main>
+  </body>
+</html>
