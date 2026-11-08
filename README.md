@@ -10,3 +10,4 @@
 | 2 | Social links profile | [code ↗](./newbie/fm-social-links-profile-solution/) | [demo ↗](https://maadhav-codes.github.io/newbie/fm-social-links-profile-solution/) | 16 April 2025 | 16 April 2025 |
 | 3 | Recipe page | [code ↗](./newbie/fm-recipe-page-solution/) | [demo ↗](https://maadhav-codes.github.io/newbie/fm-recipe-page-solution/) | 16 April 2025 | 16 April 2025 |
 | 4 | Product preview card | [code ↗](./newbie/fm-product-preview-card-component-solution/) | [demo ↗](https://maadhav-codes.github.io/newbie/fm-product-preview-card-component-solution/) | 18 April 2025 | 18 April 2025 |
+| 5 | 3-column preview card | [code ↗](./newbie/fm-column-preview-card-solution/) | [demo ↗](https://maadhav-codes.github.io/newbie/fm-column-preview-card-solution/) | 21 April 2025 | 21 April 2025 |
