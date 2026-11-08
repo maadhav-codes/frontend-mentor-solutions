@@ -1,0 +1,136 @@
+/* Base styles and CSS reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Colors */
+  --yellow: hsl(47, 88%, 63%);
+  --grey-500: hsl(0, 0%, 42%);
+  --grey-950: hsl(0, 0%, 7%);
+  --white: hsl(0, 0%, 100%);
+
+  /* Typography */
+  --fw-regular: 500;
+  --fw-bold: 800;
+
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.75rem;
+  --space-md: 1.5rem;
+
+  /* Border radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.625rem;
+  --radius-lg: 1.25rem;
+}
+
+body {
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: var(--fw-regular);
+  background: var(--yellow);
+  color: var(--grey-950);
+  line-height: 1.5;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: var(--space-md);
+}
+
+.container {
+  width: 100%;
+  max-width: 384px;
+  margin: 0 auto;
+}
+
+.card {
+  padding: var(--space-md);
+  border-radius: var(--radius-lg);
+  background: var(--white);
+  border: 1px solid var(--grey-950);
+  box-shadow: 8px 8px 0 0 var(--grey-950);
+  transition: transform 200ms ease-in-out;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(0.25rem);
+}
+
+figure {
+  margin-bottom: var(--space-md);
+}
+
+figure img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+}
+
+.category {
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-sm);
+  background: var(--yellow);
+  font-size: 0.75rem;
+  font-weight: var(--fw-bold);
+}
+
+.content time {
+  display: block;
+  font-size: 0.75rem;
+  margin: var(--space-sm) 0;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: var(--fw-bold);
+  margin-bottom: var(--space-sm);
+  transition: color 250ms ease-in;
+}
+
+.title:hover {
+  color: var(--yellow);
+}
+
+.description {
+  font-size: 0.875rem;
+  color: var(--grey-500);
+  margin-bottom: var(--space-sm);
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.author img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+
+.author span {
+  font-size: 0.875rem;
+  font-weight: var(--fw-bold);
+}
+
+@media (min-width: 768px) {
+  .category,
+  .content time {
+    font-size: 0.875rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+}
