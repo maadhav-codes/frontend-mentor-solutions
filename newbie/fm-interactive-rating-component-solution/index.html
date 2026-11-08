@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favicon-32x32.png"
+      type="image/png"
+    />
+    <title>Frontend Mentor | Interactive rating component</title>
+
+    <!-- Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <!-- Author -->
+    <meta name="author" content="https://github.com/maadhav-codes" />
+  </head>
+
+  <body>
+    <main class="container">
+      <!-- Rating State Card -->
+      <section class="card rating-card">
+        <header>
+          <figure class="icon_wrapper">
+            <img
+              src="./assets/images/icon-star.svg"
+              alt="Star icon"
+              aria-hidden="true"
+            />
+          </figure>
+
+          <h1 class="title">How did we do?</h1>
+
+          <p class="description">
+            Please let us know how we did with your support request. All
+            feedback is appreciated to help us improve our offering!
+          </p>
+        </header>
+
+        <form id="rating-form" onsubmit="handleSubmit(event)">
+          <fieldset>
+            <legend class="sr-only">Select your rating</legend>
+
+            <div class="rating-options" role="radiogroup">
+              <ul>
+                <li>
+                  <input
+                    type="radio"
+                    name="rating"
+                    id="rating-1"
+                    value="1"
+                    class="sr-only"
+                  />
+                  <label for="rating-1" aria-label="Rate 1 out of 5">1</label>
+                </li>
+
+                <li>
+                  <input
+                    type="radio"
+                    name="rating"
+                    id="rating-2"
+                    value="2"
+                    class="sr-only"
+                  />
+                  <label for="rating-2" aria-label="Rate 2 out of 5">2</label>
+                </li>
+
+                <li>
+                  <input
+                    type="radio"
+                    name="rating"
+                    id="rating-3"
+                    value="3"
+                    class="sr-only"
+                  />
+                  <label for="rating-3" aria-label="Rate 3 out of 5">3</label>
+                </li>
+
+                <li>
+                  <input
+                    type="radio"
+                    name="rating"
+                    id="rating-4"
+                    value="4"
+                    class="sr-only"
+                  />
+                  <label for="rating-4" aria-label="Rate 4 out of 5">4</label>
+                </li>
+
+                <li>
+                  <input
+                    type="radio"
+                    name="rating"
+                    id="rating-5"
+                    value="5"
+                    class="sr-only"
+                  />
+                  <label for="rating-5" aria-label="Rate 5 out of 5">5</label>
+                </li>
+              </ul>
+            </div>
+
+            <p class="error" aria-live="polite" hidden>
+              Please select a rating
+            </p>
+          </fieldset>
+
+          <button type="submit" class="submit-btn">Submit</button>
+        </form>
+      </section>
+
+      <!-- Thank You State Card -->
+      <section class="card thank-you-card" hidden>
+        <figure>
+          <img
+            src="./assets/images/illustration-thank-you.svg"
+            alt="Thank You Illustration"
+          />
+        </figure>
+
+        <p class="rating">
+          You selected <output id="selected-rating"></output> out of 5
+        </p>
+
+        <h1 class="title">Thank you!</h1>
+        <p class="description">
+          We appreciate you taking the time to give a rating. If you ever need
+          more support, don't hesitate to get in touch!
+        </p>
+      </section>
+    </main>
+
+    <script>
+      function handleSubmit(event) {
+        event.preventDefault();
+
+        const formData = new FormData(event.target);
+        const rating = formData.get("rating");
+
+        const error = document.querySelector("fieldset .error");
+
+        if (!rating) {
+          error.hidden = false;
+          return;
+        }
+
+        error.hidden = true;
+
+        const ratingCard = document.querySelector(".rating-card");
+        const thankYouCard = document.querySelector(".thank-you-card");
+        const selectedRating = document.getElementById("selected-rating");
+
+        selectedRating.textContent = rating;
+
+        ratingCard.hidden = true;
+        thankYouCard.hidden = false;
+
+        thankYouCard.setAttribute("tabindex", "-1");
+        thankYouCard.focus();
+
+        event.target.reset();
+      }
+    </script>
+  </body>
+</html>

@@ -12,3 +12,4 @@
 | 4 | Product preview card | [code ↗](./newbie/fm-product-preview-card-component-solution/) | [demo ↗](https://maadhav-codes.github.io/newbie/fm-product-preview-card-component-solution/) | 18 April 2025 | 18 April 2025 |
 | 5 | 3-column preview card | [code ↗](./newbie/fm-column-preview-card-solution/) | [demo ↗](https://maadhav-codes.github.io/newbie/fm-column-preview-card-solution/) | 21 April 2025 | 21 April 2025 |
 | 6 | Four card feature section | [code ↗](./newbie/fm-four-card-feature-section-solution/) | [demo ↗](https://maadhav-codes.github.io/newbie/fm-four-card-feature-section-solution/) | 26 April 2025 | 26 April 2025 |
+| 7 | Interactive rating component | [code ↗](./newbie/fm-interactive-rating-component-solution/) | [demo ↗](https://maadhav-codes.github.io/newbie/fm-interactive-rating-component-solution/) | 19 April 2025 | 19 April 2025 |
