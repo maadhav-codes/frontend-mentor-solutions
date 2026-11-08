@@ -14,3 +14,4 @@
 | 6 | Four card feature section | [code ↗](./newbie/fm-four-card-feature-section-solution/) | [demo ↗](https://maadhav-codes.github.io/newbie/fm-four-card-feature-section-solution/) | 26 April 2025 | 26 April 2025 |
 | 7 | Interactive rating component | [code ↗](./newbie/fm-interactive-rating-component-solution/) | [demo ↗](https://maadhav-codes.github.io/newbie/fm-interactive-rating-component-solution/) | 19 April 2025 | 19 April 2025 |
 | 8 | FAQ accordion | [code ↗](./newbie/fm-faq-accordion-solution/) | [demo ↗](https://maadhav-codes.github.io/newbie/fm-faq-accordion-solution/) | 30 April 2025 | 30 April 2025 |
+| 9 | Article preview component | [code ↗](./newbie/fm-faq-accordion-solution/) | [demo ↗](https://maadhav-codes.github.io/newbie/fm-faq-accordion-solution/) | 24 April 2025 | 25 April 2025 |
