@@ -21,3 +21,4 @@
 | 13 | Results summary component | [code ↗](./newbie/fm-social-proof-section-solution/) | [demo ↗](https://maadhav-codes.github.io/newbie/fm-social-proof-section-solution/) | 23 April 2025 | 23 April 2025 |
 | 14 | Base Apparel coming soon page | [code ↗](./newbie/fm-base-apparel-coming-soon-page-solution/) | [demo ↗](https://maadhav-codes.github.io/newbie/fm-base-apparel-coming-soon-page-solution/) | 26 April 2025 | 27 April 2025 |
 | 15 | Blog preview card | [code ↗](./newbie/fm-blog-preview-card-solution/) | [demo ↗](https://maadhav-codes.github.io/newbie/fm-blog-preview-card-solution/) | 17 April 2025 | 17 April 2025 |
+| 16 | NFT preview card | [code ↗](./newbie/fm-nft-preview-card-component-solution/) | [demo ↗](https://maadhav-codes.github.io/newbie/fm-nft-preview-card-component-solution/) | 20 April 2025 | 20 April 2025 |
