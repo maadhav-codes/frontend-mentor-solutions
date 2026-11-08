@@ -18,3 +18,4 @@
 | 10 | Ping coming soon page | [code ↗](./newbie/fm-ping-single-column-coming-soon-page-solution/) | [demo ↗](https://maadhav-codes.github.io/newbie/fm-ping-single-column-coming-soon-page-solution/) | 28 April 2025 | 29 April 2025 |
 | 11 | Intro component with sign-up form | [code ↗](./newbie/fm-intro-component-with-signup-form-solution/) | [demo ↗](https://maadhav-codes.github.io/newbie/fm-intro-component-with-signup-form-solution/) | 27 April 2025 | 27 April 2025 |
 | 12 | Results summary component | [code ↗](./newbie/fm-results-summary-component-solution/) | [demo ↗](https://maadhav-codes.github.io/newbie/fm-results-summary-component-solution/) | 18 April 2025 | 18 April 2025 |
+| 13 | Results summary component | [code ↗](./newbie/fm-social-proof-section-solution/) | [demo ↗](https://maadhav-codes.github.io/newbie/fm-social-proof-section-solution/) | 23 April 2025 | 23 April 2025 |
