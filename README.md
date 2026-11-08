@@ -16,3 +16,4 @@
 | 8 | FAQ accordion | [code ↗](./newbie/fm-faq-accordion-solution/) | [demo ↗](https://maadhav-codes.github.io/newbie/fm-faq-accordion-solution/) | 30 April 2025 | 30 April 2025 |
 | 9 | Article preview component | [code ↗](./newbie/fm-faq-accordion-solution/) | [demo ↗](https://maadhav-codes.github.io/newbie/fm-faq-accordion-solution/) | 24 April 2025 | 25 April 2025 |
 | 10 | Ping coming soon page | [code ↗](./newbie/fm-ping-single-column-coming-soon-page-solution/) | [demo ↗](https://maadhav-codes.github.io/newbie/fm-ping-single-column-coming-soon-page-solution/) | 28 April 2025 | 29 April 2025 |
+| 11 | Intro component with sign-up form | [code ↗](./newbie/fm-intro-component-with-signup-form-solution/) | [demo ↗](https://maadhav-codes.github.io/newbie/fm-intro-component-with-signup-form-solution/) | 27 April 2025 | 27 April 2025 |
