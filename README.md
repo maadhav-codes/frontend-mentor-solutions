@@ -54,6 +54,7 @@ A curated collection of solutions to challenges from [Frontend Mentor](https://w
 | :-: | :-- | :-- | :-- | :-- | :-- |
 | 1 | Testimonials grid section | [code ↗](./junior/fm-testimonials-grid-section-solution/) | [demo ↗](https://maadhav-codes.github.io/frontend-mentor-solutions/junior/fm-testimonials-grid-section-solution/) | 30 April 2025 | 30 April 2025 |
 | 2 | Bento grid | [code ↗](./junior/fm-bento-grid-solution/) | [demo ↗](https://maadhav-codes.github.io/frontend-mentor-solutions/junior/fm-bento-grid-solution/) | 11 Feb 2026 | 12 Feb 2026 |
+| 3 | News homepage | [code ↗](./junior/fm-news-homepage-solution/) | [demo ↗](https://maadhav-codes.github.io/frontend-mentor-solutions/junior/fm-news-homepage-solution/) | 1 May 2025 | 1 May 2025 |
 
 ## 👤 Author
 
