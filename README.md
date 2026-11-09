@@ -24,3 +24,4 @@
 | 16 | NFT preview card | [code ↗](./newbie/fm-nft-preview-card-component-solution/) | [demo ↗](https://maadhav-codes.github.io/newbie/fm-nft-preview-card-component-solution/) | 20 April 2025 | 20 April 2025 |
 | 17 | Order summary component | [code ↗](./newbie/fm-order-summary-component-solution/) | [demo ↗](https://maadhav-codes.github.io/newbie/fm-order-summary-component-solution/) | 20 April 2025 | 20 April 2025 |
 | 18 | Stats preview card | [code ↗](./newbie/fm-stats-preview-card-component-solution/) | [demo ↗](https://maadhav-codes.github.io/newbie/fm-stats-preview-card-component-solution/) | 20 April 2025 | 20 April 2025 |
+| 19 | Profile card component | [code ↗](./newbie/fm-profile-card-component-solution/) | [demo ↗](https://maadhav-codes.github.io/newbie/fm-profile-card-component-solution/) | 22 April 2025 | 22 April 2025 |
