@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="./assets/images/favicon-32x32.png"
+      type="image/png"
+    />
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <!-- Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- Author -->
+    <meta name="author" content="https://github.com/maadhav-codes" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <img src="./assets/images/logo.svg" alt="Splitter app logo" />
+    </header>
+
+    <main class="card">
+      <h1 class="sr-only">Tip Calculator</h1>
+
+      <form id="tip-form">
+        <h2 class="sr-only">Tip Calculation Form</h2>
+
+        <section>
+          <h3 class="sr-only">
+            Bill, Tip Percentage, and Number of People Inputs
+          </h3>
+
+          <div class="form-group bill-group">
+            <label for="bill">Bill</label>
+            <input
+              type="number"
+              name="bill"
+              id="bill"
+              placeholder="0"
+              min="0"
+              step="0.01"
+              required
+              aria-describedby="bill-error"
+            />
+            <output id="bill-error" aria-live="polite" role="alert"></output>
+          </div>
+
+          <fieldset class="tip-selection">
+            <legend>Select Tip %</legend>
+
+            <div class="selection-options">
+              <button type="button" data-tip-percentage="5">5%</button>
+              <button type="button" data-tip-percentage="10">10%</button>
+              <button type="button" data-tip-percentage="15">15%</button>
+              <button type="button" data-tip-percentage="25">25%</button>
+              <button type="button" data-tip-percentage="50">50%</button>
+
+              <div class="form-group custom-tip-group">
+                <label for="custom-tip" class="sr-only"
+                  >Custom Tip Percentage</label
+                >
+                <input
+                  type="number"
+                  name="custom-tip"
+                  id="custom-tip"
+                  min="0"
+                  max="100"
+                  step="1"
+                  placeholder="Custom"
+                />
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="form-group people-group">
+            <label for="people">Number of People</label>
+            <input
+              type="number"
+              name="people"
+              id="people"
+              placeholder="0"
+              min="1"
+              step="1"
+              required
+              aria-describedby="people-error"
+            />
+            <output id="people-error" aria-live="polite" role="alert"></output>
+          </div>
+        </section>
+      </form>
+
+      <section class="results">
+        <h2 class="sr-only">Calculated Tip and Total per Person</h2>
+
+        <dl class="result-item">
+          <dt class="result-label">
+            <span class="title">Tip Amount</span>
+            <span class="subtitle">/ person</span>
+          </dt>
+
+          <dd>
+            <output id="tip-amount" aria-live="polite" role="alert"
+              >$0.00</output
+            >
+          </dd>
+        </dl>
+
+        <dl class="result-item">
+          <dt class="result-label">
+            <span class="title">Total</span>
+            <span class="subtitle">/ person</span>
+          </dt>
+
+          <dd>
+            <output id="total-per-person" aria-live="polite" role="alert"
+              >$0.00</output
+            >
+          </dd>
+        </dl>
+
+        <button type="reset" form="tip-form" disabled>Reset</button>
+      </section>
+    </main>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>

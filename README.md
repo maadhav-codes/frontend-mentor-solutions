@@ -57,6 +57,7 @@ A curated collection of solutions to challenges from [Frontend Mentor](https://w
 | 3 | News homepage | [code ↗](./junior/fm-news-homepage-solution/) | [demo ↗](https://maadhav-codes.github.io/frontend-mentor-solutions/junior/fm-news-homepage-solution/) | 1 May 2025 | 1 May 2025 |
 | 4 | Intro section with dropdown navigation | [code ↗](./junior/fm-intro-section-with-dropdown-navigation-solution/) | [demo ↗](https://maadhav-codes.github.io/frontend-mentor-solutions/junior/fm-intro-section-with-dropdown-navigation-solution/) | 4 May 2025 | 4 May 2025 |
 | 5 | Contact form | [code ↗](./junior/fm-contact-form-solution/) | [demo ↗](https://maadhav-codes.github.io/frontend-mentor-solutions/junior/fm-contact-form-solution/) | 14 Feb 2026 | 16 Feb 2026 |
+| 6 | Tip calculator app | [code ↗](./junior/fm-tip-calculator-solution/) | [demo ↗](https://maadhav-codes.github.io/frontend-mentor-solutions/junior/fm-tip-calculator-solution/) | 12 May 2025 | 12 May 2025 |
 
 ## 👤 Author
 
