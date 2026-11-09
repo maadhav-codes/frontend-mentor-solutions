@@ -48,6 +48,12 @@ A curated collection of solutions to challenges from [Frontend Mentor](https://w
 | 18 | Ping coming soon page | [code ↗](./newbie/fm-ping-single-column-coming-soon-page-solution/) | [demo ↗](https://maadhav-codes.github.io/frontend-mentor-solutions/newbie/fm-ping-single-column-coming-soon-page-solution/) | 28 April 2025 | 29 April 2025 |
 | 19 | FAQ accordion | [code ↗](./newbie/fm-faq-accordion-solution/) | [demo ↗](https://maadhav-codes.github.io/frontend-mentor-solutions/newbie/fm-faq-accordion-solution/) | 30 April 2025 | 30 April 2025 |
 
+### Junior
+
+| # | Project | Code | Live Demo | Created on | Completed on |
+| :-: | :-- | :-- | :-- | :-- | :-- |
+| 1 | Testimonials grid section | [code ↗](./junior/fm-testimonials-grid-section-solution/) | [demo ↗](https://maadhav-codes.github.io/frontend-mentor-solutions/junior/fm-testimonials-grid-section-solution/) | 30 April 2025 | 30 April 2025 |
+
 ## 👤 Author
 
 - GitHub - [@maadhav-codes](https://github.com/maadhav-codes)
