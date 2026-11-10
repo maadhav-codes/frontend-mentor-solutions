@@ -61,6 +61,7 @@ A curated collection of solutions to challenges from [Frontend Mentor](https://w
 | 7 | Age calculator app | [code ↗](./junior/fm-age-calculator-solution/) | [demo ↗](https://maadhav-codes.github.io/frontend-mentor-solutions/junior/fm-age-calculator-solution/) | 6 May 2025 | 6 May 2025 |
 | 8 | Time tracking dashboard | [code ↗](./junior/fm-time-tracking-dashboard-solution/) | [demo ↗](https://maadhav-codes.github.io/frontend-mentor-solutions/junior/fm-time-tracking-dashboard-solution/) | 13 May 2025 | 14 May 2025 |
 | 9 | Advice generator app | [code ↗](./junior/fm-advice-generator-solution/) | [demo ↗](https://maadhav-codes.github.io/frontend-mentor-solutions/junior/fm-advice-generator-solution/) | 4 May 2025 | 4 May 2025 |
+| 10 | Conference ticket generator | [code ↗](./junior/fm-conference-ticket-generator-solution/) | [demo ↗](https://maadhav-codes.github.io/frontend-mentor-solutions/junior/fm-conference-ticket-generator-solution/) | 2 April 2026 | 15 April 2026 |
 
 ## 👤 Author
 
