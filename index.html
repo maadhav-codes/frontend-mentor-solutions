@@ -1,0 +1,1084 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Explore 33 Frontend Mentor challenge solutions by maadhav-codes, organized by difficulty with live demos, source code, and completion dates."
+    />
+    <meta name="theme-color" content="#eeede9" />
+    <title>Frontend Mentor Solutions · maadhav-codes</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --page: #eeede9;
+        --surface: #f7f6f2;
+        --ink: #272b33;
+        --muted: #606570;
+        --line: #d5d5cf;
+        --accent: #3c58ad;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 24px;
+      }
+      body {
+        margin: 0;
+        background: var(--page);
+        color: var(--ink);
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        line-height: 1.6;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      a:focus-visible {
+        outline: 3px solid var(--accent);
+        outline-offset: 5px;
+        border-radius: 4px;
+      }
+      .skip-link {
+        position: absolute;
+        top: -80px;
+        left: 20px;
+        padding: 10px 18px;
+        background: var(--surface);
+        z-index: 2;
+      }
+      .skip-link:focus {
+        top: 12px;
+      }
+      .container {
+        width: min(1120px, calc(100% - 48px));
+        margin: auto;
+      }
+      footer a:hover {
+        color: var(--accent);
+        text-decoration: underline;
+      }
+      .hero {
+        padding: 76px 0 44px;
+        max-width: 760px;
+      }
+      h1 {
+        font-size: clamp(2.5rem, 6vw, 4.5rem);
+        line-height: 1.08;
+        letter-spacing: -0.055em;
+        margin: 0 0 24px;
+        font-weight: 750;
+      }
+      h1 span {
+        color: var(--accent);
+      }
+      .intro a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+        overflow-wrap: anywhere;
+      }
+      .intro {
+        max-width: 630px;
+        color: var(--muted);
+        font-size: 1.0625rem;
+        margin: 0;
+      }
+      .tier-nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding-bottom: 48px;
+      }
+      .tier-nav a {
+        display: inline-flex;
+        align-items: center;
+        gap: 14px;
+        padding: 9px 15px;
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        font-size: 0.8125rem;
+        font-weight: 650;
+      }
+      .tier-nav a:hover {
+        border-color: var(--accent);
+        color: var(--accent);
+      }
+      .tier-nav span {
+        font-size: 0.6875rem;
+        color: var(--muted);
+        font-variant-numeric: tabular-nums;
+      }
+      .tier {
+        margin-bottom: 52px;
+        --tier-color: #27616c;
+        --tier-bg: #dfebe6;
+      }
+      .tier-2 {
+        --tier-color: #365aba;
+        --tier-bg: #e3e7f3;
+      }
+      .tier-3 {
+        --tier-color: #785810;
+        --tier-bg: #eee5ce;
+      }
+      .tier-4 {
+        --tier-color: #934532;
+        --tier-bg: #efdfd7;
+      }
+      .tier-5 {
+        --tier-color: #745096;
+        --tier-bg: #e9e1ed;
+      }
+      .section-heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 20px;
+      }
+      .section-title {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .level {
+        display: grid;
+        place-items: center;
+        width: 34px;
+        height: 34px;
+        color: var(--tier-color);
+        background: var(--tier-bg);
+        border-radius: 8px;
+        font-size: 0.75rem;
+        font-weight: 750;
+      }
+      h2 {
+        margin: 0;
+        font-size: 1.5rem;
+        letter-spacing: -0.035em;
+      }
+      .section-count {
+        color: var(--muted);
+        font-size: 0.8125rem;
+      }
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+      }
+      .card {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 24px;
+        transition:
+          border-color 0.18s,
+          box-shadow 0.18s;
+      }
+      .card:hover {
+        border-color: #a5afc5;
+        box-shadow: 0 5px 18px #272b330a;
+      }
+      .card-tier {
+        color: var(--tier-color);
+        background: var(--tier-bg);
+        padding: 3px 8px;
+        border-radius: 4px;
+        font-size: 0.625rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-weight: 750;
+      }
+      h3 {
+        font-size: 1.0625rem;
+        line-height: 1.4;
+        letter-spacing: -0.02em;
+        margin: 15px 0 12px;
+      }
+      .date {
+        margin: auto 0 22px;
+        padding-top: 5px;
+        color: var(--muted);
+        font-size: 0.75rem;
+      }
+      time {
+        white-space: nowrap;
+      }
+      .card-links {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 22px;
+        padding-top: 16px;
+        border-top: 1px solid var(--line);
+        font-size: 0.8125rem;
+        font-weight: 650;
+      }
+      .card-links a {
+        display: inline-flex;
+        gap: 8px;
+        align-items: center;
+        min-height: 32px;
+      }
+      .card-links a:hover {
+        text-decoration: underline;
+        text-underline-offset: 4px;
+      }
+      .demo {
+        color: var(--accent);
+      }
+      .empty {
+        border: 1px dashed var(--line);
+        border-radius: 12px;
+        padding: 25px;
+      }
+      .empty p {
+        margin: 0 0 3px;
+        font-weight: 650;
+        font-size: 0.9375rem;
+      }
+      .empty span {
+        color: var(--muted);
+        font-size: 0.875rem;
+      }
+      footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 26px 0 32px;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 0.8125rem;
+      }
+      footer p {
+        margin: 0;
+      }
+      @media (max-width: 900px) {
+        .cards {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+      @media (max-width: 580px) {
+        .container {
+          width: calc(100% - 32px);
+        }
+        .hero {
+          padding-top: 48px;
+        }
+        .cards {
+          grid-template-columns: 1fr;
+        }
+        .card {
+          padding: 22px;
+        }
+        .tier-nav {
+          gap: 8px;
+        }
+        .tier-nav a {
+          gap: 10px;
+          padding: 8px 12px;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+        .card {
+          transition: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to challenges</a>
+    <div class="container">
+      <header class="hero">
+        <h1>Frontend Mentor<br /><span>solutions.</span></h1>
+        <p class="intro">
+          A collection of challenges turned into responsive interfaces. Explore
+          my progress through each difficulty tier, try the live demos, and take
+          a look at the code behind them. Source:
+          <a href="https://github.com/maadhav-codes/frontend-mentor-solutions"
+            >github.com/maadhav-codes/frontend-mentor-solutions</a
+          >
+        </p>
+      </header>
+      <main id="main">
+        <nav class="tier-nav" aria-label="Challenge difficulty">
+          <a href="#newbie">Newbie<span>19</span></a>
+          <a href="#junior">Junior<span>14</span></a>
+          <a href="#intermediate">Intermediate<span>00</span></a>
+          <a href="#advanced">Advanced<span>00</span></a>
+          <a href="#guru">Guru<span>00</span></a>
+        </nav>
+        <section
+          id="newbie"
+          class="tier tier-1"
+          aria-labelledby="newbie-heading"
+        >
+          <div class="section-heading">
+            <div class="section-title">
+              <span class="level" aria-hidden="true">01</span>
+              <h2 id="newbie-heading">Newbie</h2>
+            </div>
+            <span class="section-count">19 completed</span>
+          </div>
+          <div class="cards">
+            <article class="card">
+              <span class="card-tier">Newbie</span>
+              <h3>Social links profile</h3>
+              <p class="date">
+                Completed on <time datetime="2025-04-16">16 April 2025</time>
+              </p>
+              <div class="card-links">
+                <a
+                  class="demo"
+                  href="./newbie/fm-social-links-profile-solution/"
+                  aria-label="Live demo: Social links profile"
+                  >Live demo <span aria-hidden="true">↗</span></a
+                >
+                <a
+                  href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/newbie/fm-social-links-profile-solution"
+                  aria-label="View code: Social links profile"
+                  >Code <span aria-hidden="true">↗</span></a
+                >
+              </div>
+            </article>
+            <article class="card">
+              <span class="card-tier">Newbie</span>
+              <h3>Recipe page</h3>
+              <p class="date">
+                Completed on <time datetime="2025-04-16">16 April 2025</time>
+              </p>
+              <div class="card-links">
+                <a
+                  class="demo"
+                  href="./newbie/fm-recipe-page-solution/"
+                  aria-label="Live demo: Recipe page"
+                  >Live demo <span aria-hidden="true">↗</span></a
+                >
+                <a
+                  href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/newbie/fm-recipe-page-solution"
+                  aria-label="View code: Recipe page"
+                  >Code <span aria-hidden="true">↗</span></a
+                >
+              </div>
+            </article>
+            <article class="card">
+              <span class="card-tier">Newbie</span>
+              <h3>Blog preview card</h3>
+              <p class="date">
+                Completed on <time datetime="2025-04-17">17 April 2025</time>
+              </p>
+              <div class="card-links">
+                <a
+                  class="demo"
+                  href="./newbie/fm-blog-preview-card-solution/"
+                  aria-label="Live demo: Blog preview card"
+                  >Live demo <span aria-hidden="true">↗</span></a
+                >
+                <a
+                  href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/newbie/fm-blog-preview-card-solution"
+                  aria-label="View code: Blog preview card"
+                  >Code <span aria-hidden="true">↗</span></a
+                >
+              </div>
+            </article>
+            <article class="card">
+              <span class="card-tier">Newbie</span>
+              <h3>Product preview card</h3>
+              <p class="date">
+                Completed on <time datetime="2025-04-18">18 April 2025</time>
+              </p>
+              <div class="card-links">
+                <a
+                  class="demo"
+                  href="./newbie/fm-product-preview-card-component-solution/"
+                  aria-label="Live demo: Product preview card"
+                  >Live demo <span aria-hidden="true">↗</span></a
+                >
+                <a
+                  href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/newbie/fm-product-preview-card-component-solution"
+                  aria-label="View code: Product preview card"
+                  >Code <span aria-hidden="true">↗</span></a
+                >
+              </div>
+            </article>
+            <article class="card">
+              <span class="card-tier">Newbie</span>
+              <h3>Results summary component</h3>
+              <p class="date">
+                Completed on <time datetime="2025-04-18">18 April 2025</time>
+              </p>
+              <div class="card-links">
+                <a
+                  class="demo"
+                  href="./newbie/fm-results-summary-component-solution/"
+                  aria-label="Live demo: Results summary component"
+                  >Live demo <span aria-hidden="true">↗</span></a
+                >
+                <a
+                  href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/newbie/fm-results-summary-component-solution"
+                  aria-label="View code: Results summary component"
+                  >Code <span aria-hidden="true">↗</span></a
+                >
+              </div>
+            </article>
+            <article class="card">
+              <span class="card-tier">Newbie</span>
+              <h3>Interactive rating component</h3>
+              <p class="date">
+                Completed on <time datetime="2025-04-19">19 April 2025</time>
+              </p>
+              <div class="card-links">
+                <a
+                  class="demo"
+                  href="./newbie/fm-interactive-rating-component-solution/"
+                  aria-label="Live demo: Interactive rating component"
+                  >Live demo <span aria-hidden="true">↗</span></a
+                >
+                <a
+                  href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/newbie/fm-interactive-rating-component-solution"
+                  aria-label="View code: Interactive rating component"
+                  >Code <span aria-hidden="true">↗</span></a
+                >
+              </div>
+            </article>
+            <article class="card">
+              <span class="card-tier">Newbie</span>
+              <h3>QR code component</h3>
+              <p class="date">
+                Completed on <time datetime="2025-04-20">20 April 2025</time>
+              </p>
+              <div class="card-links">
+                <a
+                  class="demo"
+                  href="./newbie/fm-qr-code-component-solution/"
+                  aria-label="Live demo: QR code component"
+                  >Live demo <span aria-hidden="true">↗</span></a
+                >
+                <a
+                  href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/newbie/fm-qr-code-component-solution"
+                  aria-label="View code: QR code component"
+                  >Code <span aria-hidden="true">↗</span></a
+                >
+              </div>
+            </article>
+            <article class="card">
+              <span class="card-tier">Newbie</span>
+              <h3>NFT preview card</h3>
+              <p class="date">
+                Completed on <time datetime="2025-04-20">20 April 2025</time>
+              </p>
+              <div class="card-links">
+                <a
+                  class="demo"
+                  href="./newbie/fm-nft-preview-card-component-solution/"
+                  aria-label="Live demo: NFT preview card"
+                  >Live demo <span aria-hidden="true">↗</span></a
+                >
+                <a
+                  href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/newbie/fm-nft-preview-card-component-solution"
+                  aria-label="View code: NFT preview card"
+                  >Code <span aria-hidden="true">↗</span></a
+                >
+              </div>
+            </article>
+            <article class="card">
+              <span class="card-tier">Newbie</span>
+              <h3>Order summary component</h3>
+              <p class="date">
+                Completed on <time datetime="2025-04-20">20 April 2025</time>
+              </p>
+              <div class="card-links">
+                <a
+                  class="demo"
+                  href="./newbie/fm-order-summary-component-solution/"
+                  aria-label="Live demo: Order summary component"
+                  >Live demo <span aria-hidden="true">↗</span></a
+                >
+                <a
+                  href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/newbie/fm-order-summary-component-solution"
+                  aria-label="View code: Order summary component"
+                  >Code <span aria-hidden="true">↗</span></a
+                >
+              </div>
+            </article>
+            <article class="card">
+              <span class="card-tier">Newbie</span>
+              <h3>Stats preview card</h3>
+              <p class="date">
+                Completed on <time datetime="2025-04-20">20 April 2025</time>
+              </p>
+              <div class="card-links">
+                <a
+                  class="demo"
+                  href="./newbie/fm-stats-preview-card-component-solution/"
+                  aria-label="Live demo: Stats preview card"
+                  >Live demo <span aria-hidden="true">↗</span></a
+                >
+                <a
+                  href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/newbie/fm-stats-preview-card-component-solution"
+                  aria-label="View code: Stats preview card"
+                  >Code <span aria-hidden="true">↗</span></a
+                >
+              </div>
+            </article>
+            <article class="card">
+              <span class="card-tier">Newbie</span>
+              <h3>3-column preview card</h3>
+              <p class="date">
+                Completed on <time datetime="2025-04-21">21 April 2025</time>
+              </p>
+              <div class="card-links">
+                <a
+                  class="demo"
+                  href="./newbie/fm-column-preview-card-solution/"
+                  aria-label="Live demo: 3-column preview card"
+                  >Live demo <span aria-hidden="true">↗</span></a
+                >
+                <a
+                  href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/newbie/fm-column-preview-card-solution"
+                  aria-label="View code: 3-column preview card"
+                  >Code <span aria-hidden="true">↗</span></a
+                >
+              </div>
+            </article>
+            <article class="card">
+              <span class="card-tier">Newbie</span>
+              <h3>Profile card component</h3>
+              <p class="date">
+                Completed on <time datetime="2025-04-22">22 April 2025</time>
+              </p>
+              <div class="card-links">
+                <a
+                  class="demo"
+                  href="./newbie/fm-profile-card-component-solution/"
+                  aria-label="Live demo: Profile card component"
+                  >Live demo <span aria-hidden="true">↗</span></a
+                >
+                <a
+                  href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/newbie/fm-profile-card-component-solution"
+                  aria-label="View code: Profile card component"
+                  >Code <span aria-hidden="true">↗</span></a
+                >
+              </div>
+            </article>
+            <article class="card">
+              <span class="card-tier">Newbie</span>
+              <h3>Social proof section</h3>
+              <p class="date">
+                Completed on <time datetime="2025-04-23">23 April 2025</time>
+              </p>
+              <div class="card-links">
+                <a
+                  class="demo"
+                  href="./newbie/fm-social-proof-section-solution/"
+                  aria-label="Live demo: Social proof section"
+                  >Live demo <span aria-hidden="true">↗</span></a
+                >
+                <a
+                  href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/newbie/fm-social-proof-section-solution"
+                  aria-label="View code: Social proof section"
+                  >Code <span aria-hidden="true">↗</span></a
+                >
+              </div>
+            </article>
+            <article class="card">
+              <span class="card-tier">Newbie</span>
+              <h3>Article preview component</h3>
+              <p class="date">
+                Completed on <time datetime="2025-04-25">25 April 2025</time>
+              </p>
+              <div class="card-links">
+                <a
+                  class="demo"
+                  href="./newbie/fm-article-preview-component-solution/"
+                  aria-label="Live demo: Article preview component"
+                  >Live demo <span aria-hidden="true">↗</span></a
+                >
+                <a
+                  href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/newbie/fm-article-preview-component-solution"
+                  aria-label="View code: Article preview component"
+                  >Code <span aria-hidden="true">↗</span></a
+                >
+              </div>
+            </article>
+            <article class="card">
+              <span class="card-tier">Newbie</span>
+              <h3>Four card feature section</h3>
+              <p class="date">
+                Completed on <time datetime="2025-04-26">26 April 2025</time>
+              </p>
+              <div class="card-links">
+                <a
+                  class="demo"
+                  href="./newbie/fm-four-card-feature-section-solution/"
+                  aria-label="Live demo: Four card feature section"
+                  >Live demo <span aria-hidden="true">↗</span></a
+                >
+                <a
+                  href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/newbie/fm-four-card-feature-section-solution"
+                  aria-label="View code: Four card feature section"
+                  >Code <span aria-hidden="true">↗</span></a
+                >
+              </div>
+            </article>
+            <article class="card">
+              <span class="card-tier">Newbie</span>
+              <h3>Base Apparel coming soon page</h3>
+              <p class="date">
+                Completed on <time datetime="2025-04-27">27 April 2025</time>
+              </p>
+              <div class="card-links">
+                <a
+                  class="demo"
+                  href="./newbie/fm-base-apparel-coming-soon-page-solution/"
+                  aria-label="Live demo: Base Apparel coming soon page"
+                  >Live demo <span aria-hidden="true">↗</span></a
+                >
+                <a
+                  href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/newbie/fm-base-apparel-coming-soon-page-solution"
+                  aria-label="View code: Base Apparel coming soon page"
+                  >Code <span aria-hidden="true">↗</span></a
+                >
+              </div>
+            </article>
+            <article class="card">
+              <span class="card-tier">Newbie</span>
+              <h3>Intro component with sign-up form</h3>
+              <p class="date">
+                Completed on <time datetime="2025-04-27">27 April 2025</time>
+              </p>
+              <div class="card-links">
+                <a
+                  class="demo"
+                  href="./newbie/fm-intro-component-with-signup-form-solution/"
+                  aria-label="Live demo: Intro component with sign-up form"
+                  >Live demo <span aria-hidden="true">↗</span></a
+                >
+                <a
+                  href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/newbie/fm-intro-component-with-signup-form-solution"
+                  aria-label="View code: Intro component with sign-up form"
+                  >Code <span aria-hidden="true">↗</span></a
+                >
+              </div>
+            </article>
+            <article class="card">
+              <span class="card-tier">Newbie</span>
+              <h3>Ping coming soon page</h3>
+              <p class="date">
+                Completed on <time datetime="2025-04-29">29 April 2025</time>
+              </p>
+              <div class="card-links">
+                <a
+                  class="demo"
+                  href="./newbie/fm-ping-single-column-coming-soon-page-solution/"
+                  aria-label="Live demo: Ping coming soon page"
+                  >Live demo <span aria-hidden="true">↗</span></a
+                >
+                <a
+                  href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/newbie/fm-ping-single-column-coming-soon-page-solution"
+                  aria-label="View code: Ping coming soon page"
+                  >Code <span aria-hidden="true">↗</span></a
+                >
+              </div>
+            </article>
+            <article class="card">
+              <span class="card-tier">Newbie</span>
+              <h3>FAQ accordion</h3>
+              <p class="date">
+                Completed on <time datetime="2025-04-30">30 April 2025</time>
+              </p>
+              <div class="card-links">
+                <a
+                  class="demo"
+                  href="./newbie/fm-faq-accordion-solution/"
+                  aria-label="Live demo: FAQ accordion"
+                  >Live demo <span aria-hidden="true">↗</span></a
+                >
+                <a
+                  href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/newbie/fm-faq-accordion-solution"
+                  aria-label="View code: FAQ accordion"
+                  >Code <span aria-hidden="true">↗</span></a
+                >
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section
+          id="junior"
+          class="tier tier-2"
+          aria-labelledby="junior-heading"
+        >
+          <div class="section-heading">
+            <div class="section-title">
+              <span class="level" aria-hidden="true">02</span>
+              <h2 id="junior-heading">Junior</h2>
+            </div>
+            <span class="section-count">14 completed</span>
+          </div>
+          <div class="cards">
+            <article class="card">
+              <span class="card-tier">Junior</span>
+              <h3>Testimonials grid section</h3>
+              <p class="date">
+                Completed on <time datetime="2025-04-30">30 April 2025</time>
+              </p>
+              <div class="card-links">
+                <a
+                  class="demo"
+                  href="./junior/fm-testimonials-grid-section-solution/"
+                  aria-label="Live demo: Testimonials grid section"
+                  >Live demo <span aria-hidden="true">↗</span></a
+                >
+                <a
+                  href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/junior/fm-testimonials-grid-section-solution"
+                  aria-label="View code: Testimonials grid section"
+                  >Code <span aria-hidden="true">↗</span></a
+                >
+              </div>
+            </article>
+            <article class="card">
+              <span class="card-tier">Junior</span>
+              <h3>News homepage</h3>
+              <p class="date">
+                Completed on <time datetime="2025-05-01">1 May 2025</time>
+              </p>
+              <div class="card-links">
+                <a
+                  class="demo"
+                  href="./junior/fm-news-homepage-solution/"
+                  aria-label="Live demo: News homepage"
+                  >Live demo <span aria-hidden="true">↗</span></a
+                >
+                <a
+                  href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/junior/fm-news-homepage-solution"
+                  aria-label="View code: News homepage"
+                  >Code <span aria-hidden="true">↗</span></a
+                >
+              </div>
+            </article>
+            <article class="card">
+              <span class="card-tier">Junior</span>
+              <h3>Intro section with dropdown navigation</h3>
+              <p class="date">
+                Completed on <time datetime="2025-05-04">4 May 2025</time>
+              </p>
+              <div class="card-links">
+                <a
+                  class="demo"
+                  href="./junior/fm-intro-section-with-dropdown-navigation-solution/"
+                  aria-label="Live demo: Intro section with dropdown navigation"
+                  >Live demo <span aria-hidden="true">↗</span></a
+                >
+                <a
+                  href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/junior/fm-intro-section-with-dropdown-navigation-solution"
+                  aria-label="View code: Intro section with dropdown navigation"
+                  >Code <span aria-hidden="true">↗</span></a
+                >
+              </div>
+            </article>
+            <article class="card">
+              <span class="card-tier">Junior</span>
+              <h3>Advice generator app</h3>
+              <p class="date">
+                Completed on <time datetime="2025-05-04">4 May 2025</time>
+              </p>
+              <div class="card-links">
+                <a
+                  class="demo"
+                  href="./junior/fm-advice-generator-solution/"
+                  aria-label="Live demo: Advice generator app"
+                  >Live demo <span aria-hidden="true">↗</span></a
+                >
+                <a
+                  href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/junior/fm-advice-generator-solution"
+                  aria-label="View code: Advice generator app"
+                  >Code <span aria-hidden="true">↗</span></a
+                >
+              </div>
+            </article>
+            <article class="card">
+              <span class="card-tier">Junior</span>
+              <h3>Newsletter sign-up form with success message</h3>
+              <p class="date">
+                Completed on <time datetime="2025-05-06">6 May 2025</time>
+              </p>
+              <div class="card-links">
+                <a
+                  class="demo"
+                  href="./junior/fm-newsletter-signup-form-solution/"
+                  aria-label="Live demo: Newsletter sign-up form with success message"
+                  >Live demo <span aria-hidden="true">↗</span></a
+                >
+                <a
+                  href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/junior/fm-newsletter-signup-form-solution"
+                  aria-label="View code: Newsletter sign-up form with success message"
+                  >Code <span aria-hidden="true">↗</span></a
+                >
+              </div>
+            </article>
+            <article class="card">
+              <span class="card-tier">Junior</span>
+              <h3>Age calculator app</h3>
+              <p class="date">
+                Completed on <time datetime="2025-05-06">6 May 2025</time>
+              </p>
+              <div class="card-links">
+                <a
+                  class="demo"
+                  href="./junior/fm-age-calculator-solution/"
+                  aria-label="Live demo: Age calculator app"
+                  >Live demo <span aria-hidden="true">↗</span></a
+                >
+                <a
+                  href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/junior/fm-age-calculator-solution"
+                  aria-label="View code: Age calculator app"
+                  >Code <span aria-hidden="true">↗</span></a
+                >
+              </div>
+            </article>
+            <article class="card">
+              <span class="card-tier">Junior</span>
+              <h3>Tip calculator app</h3>
+              <p class="date">
+                Completed on <time datetime="2025-05-12">12 May 2025</time>
+              </p>
+              <div class="card-links">
+                <a
+                  class="demo"
+                  href="./junior/fm-tip-calculator-solution/"
+                  aria-label="Live demo: Tip calculator app"
+                  >Live demo <span aria-hidden="true">↗</span></a
+                >
+                <a
+                  href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/junior/fm-tip-calculator-solution"
+                  aria-label="View code: Tip calculator app"
+                  >Code <span aria-hidden="true">↗</span></a
+                >
+              </div>
+            </article>
+            <article class="card">
+              <span class="card-tier">Junior</span>
+              <h3>Time tracking dashboard</h3>
+              <p class="date">
+                Completed on <time datetime="2025-05-14">14 May 2025</time>
+              </p>
+              <div class="card-links">
+                <a
+                  class="demo"
+                  href="./junior/fm-time-tracking-dashboard-solution/"
+                  aria-label="Live demo: Time tracking dashboard"
+                  >Live demo <span aria-hidden="true">↗</span></a
+                >
+                <a
+                  href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/junior/fm-time-tracking-dashboard-solution"
+                  aria-label="View code: Time tracking dashboard"
+                  >Code <span aria-hidden="true">↗</span></a
+                >
+              </div>
+            </article>
+            <article class="card">
+              <span class="card-tier">Junior</span>
+              <h3>Clipboard landing page</h3>
+              <p class="date">
+                Completed on <time datetime="2025-05-20">20 May 2025</time>
+              </p>
+              <div class="card-links">
+                <a
+                  class="demo"
+                  href="./junior/fm-clipboard-landing-page-solution/"
+                  aria-label="Live demo: Clipboard landing page"
+                  >Live demo <span aria-hidden="true">↗</span></a
+                >
+                <a
+                  href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/junior/fm-clipboard-landing-page-solution"
+                  aria-label="View code: Clipboard landing page"
+                  >Code <span aria-hidden="true">↗</span></a
+                >
+              </div>
+            </article>
+            <article class="card">
+              <span class="card-tier">Junior</span>
+              <h3>Fylo data storage component</h3>
+              <p class="date">
+                Completed on <time datetime="2025-05-21">21 May 2025</time>
+              </p>
+              <div class="card-links">
+                <a
+                  class="demo"
+                  href="./junior/fm-fylo-data-storage-component-solution/"
+                  aria-label="Live demo: Fylo data storage component"
+                  >Live demo <span aria-hidden="true">↗</span></a
+                >
+                <a
+                  href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/junior/fm-fylo-data-storage-component-solution"
+                  aria-label="View code: Fylo data storage component"
+                  >Code <span aria-hidden="true">↗</span></a
+                >
+              </div>
+            </article>
+            <article class="card">
+              <span class="card-tier">Junior</span>
+              <h3>Bento grid</h3>
+              <p class="date">
+                Completed on <time datetime="2026-02-12">12 February 2026</time>
+              </p>
+              <div class="card-links">
+                <a
+                  class="demo"
+                  href="./junior/fm-bento-grid-solution/"
+                  aria-label="Live demo: Bento grid"
+                  >Live demo <span aria-hidden="true">↗</span></a
+                >
+                <a
+                  href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/junior/fm-bento-grid-solution"
+                  aria-label="View code: Bento grid"
+                  >Code <span aria-hidden="true">↗</span></a
+                >
+              </div>
+            </article>
+            <article class="card">
+              <span class="card-tier">Junior</span>
+              <h3>Contact form</h3>
+              <p class="date">
+                Completed on <time datetime="2026-02-16">16 February 2026</time>
+              </p>
+              <div class="card-links">
+                <a
+                  class="demo"
+                  href="./junior/fm-contact-form-solution/"
+                  aria-label="Live demo: Contact form"
+                  >Live demo <span aria-hidden="true">↗</span></a
+                >
+                <a
+                  href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/junior/fm-contact-form-solution"
+                  aria-label="View code: Contact form"
+                  >Code <span aria-hidden="true">↗</span></a
+                >
+              </div>
+            </article>
+            <article class="card">
+              <span class="card-tier">Junior</span>
+              <h3>Pricing component with toggle</h3>
+              <p class="date">
+                Completed on <time datetime="2026-02-17">17 February 2026</time>
+              </p>
+              <div class="card-links">
+                <a
+                  class="demo"
+                  href="./junior/fm-pricing-component-with-toggle-solution/"
+                  aria-label="Live demo: Pricing component with toggle"
+                  >Live demo <span aria-hidden="true">↗</span></a
+                >
+                <a
+                  href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/junior/fm-pricing-component-with-toggle-solution"
+                  aria-label="View code: Pricing component with toggle"
+                  >Code <span aria-hidden="true">↗</span></a
+                >
+              </div>
+            </article>
+            <article class="card">
+              <span class="card-tier">Junior</span>
+              <h3>Conference ticket generator</h3>
+              <p class="date">
+                Completed on <time datetime="2026-04-15">15 April 2026</time>
+              </p>
+              <div class="card-links">
+                <a
+                  class="demo"
+                  href="./junior/fm-conference-ticket-generator-solution/"
+                  aria-label="Live demo: Conference ticket generator"
+                  >Live demo <span aria-hidden="true">↗</span></a
+                >
+                <a
+                  href="https://github.com/maadhav-codes/frontend-mentor-solutions/tree/main/junior/fm-conference-ticket-generator-solution"
+                  aria-label="View code: Conference ticket generator"
+                  >Code <span aria-hidden="true">↗</span></a
+                >
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section
+          id="intermediate"
+          class="tier tier-3"
+          aria-labelledby="intermediate-heading"
+        >
+          <div class="section-heading">
+            <div class="section-title">
+              <span class="level" aria-hidden="true">03</span>
+              <h2 id="intermediate-heading">Intermediate</h2>
+            </div>
+            <span class="section-count">Up next</span>
+          </div>
+          <div class="empty">
+            <p>Coming soon</p>
+            <span
+              >More challenges to explore. This chapter is still ahead.</span
+            >
+          </div>
+        </section>
+
+        <section
+          id="advanced"
+          class="tier tier-4"
+          aria-labelledby="advanced-heading"
+        >
+          <div class="section-heading">
+            <div class="section-title">
+              <span class="level" aria-hidden="true">04</span>
+              <h2 id="advanced-heading">Advanced</h2>
+            </div>
+            <span class="section-count">Up next</span>
+          </div>
+          <div class="empty">
+            <p>Coming soon</p>
+            <span
+              >More challenges to explore. This chapter is still ahead.</span
+            >
+          </div>
+        </section>
+
+        <section id="guru" class="tier tier-5" aria-labelledby="guru-heading">
+          <div class="section-heading">
+            <div class="section-title">
+              <span class="level" aria-hidden="true">05</span>
+              <h2 id="guru-heading">Guru</h2>
+            </div>
+            <span class="section-count">Up next</span>
+          </div>
+          <div class="empty">
+            <p>Coming soon</p>
+            <span
+              >More challenges to explore. This chapter is still ahead.</span
+            >
+          </div>
+        </section>
+      </main>
+      <footer>
+        <p>
+          Built by <a href="https://github.com/maadhav-codes">maadhav-codes</a>
+        </p>
+        <p>
+          Challenges &amp; designs by
+          <a href="https://www.frontendmentor.io/profile/maadhav-codes"
+            >Frontend Mentor</a
+          >
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
