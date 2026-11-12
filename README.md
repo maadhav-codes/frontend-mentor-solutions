@@ -65,6 +65,7 @@ A curated collection of solutions to challenges from [Frontend Mentor](https://w
 | 11 | Pricing component with toggle | [code ↗](./junior/fm-pricing-component-with-toggle-solution/) | [demo ↗](https://maadhav-codes.github.io/frontend-mentor-solutions/junior/fm-pricing-component-with-toggle-solution/) | 16 Feb 2026 | 17 Feb 2026 |
 | 12 | Newsletter sign-up form with success message | [code ↗](./junior/fm-newsletter-signup-form-solution/) | [demo ↗](https://maadhav-codes.github.io/frontend-mentor-solutions/junior/fm-newsletter-signup-form-solution/) | 4 May 2025 | 6 May 2025 |
 | 13 | Fylo data storage component | [code ↗](./junior/fm-fylo-data-storage-component-solution/) | [demo ↗](https://maadhav-codes.github.io/frontend-mentor-solutions/junior/fm-fylo-data-storage-component-solution/) | 21 May 2025 | 21 May 2025 |
+| 14 | Clipboard landing page | [code ↗](./junior/fm-clipboard-landing-page-solution/) | [demo ↗](https://maadhav-codes.github.io/frontend-mentor-solutions/junior/fm-clipboard-landing-page-solution/) | 20 May 2025 | 20 May 2025 |
 
 ## 👤 Author
 
