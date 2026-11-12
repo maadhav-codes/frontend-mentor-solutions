@@ -63,6 +63,7 @@ A curated collection of solutions to challenges from [Frontend Mentor](https://w
 | 9 | Advice generator app | [code ↗](./junior/fm-advice-generator-solution/) | [demo ↗](https://maadhav-codes.github.io/frontend-mentor-solutions/junior/fm-advice-generator-solution/) | 4 May 2025 | 4 May 2025 |
 | 10 | Conference ticket generator | [code ↗](./junior/fm-conference-ticket-generator-solution/) | [demo ↗](https://maadhav-codes.github.io/frontend-mentor-solutions/junior/fm-conference-ticket-generator-solution/) | 2 April 2026 | 15 April 2026 |
 | 11 | Pricing component with toggle | [code ↗](./junior/fm-pricing-component-with-toggle-solution/) | [demo ↗](https://maadhav-codes.github.io/frontend-mentor-solutions/junior/fm-pricing-component-with-toggle-solution/) | 16 Feb 2026 | 17 Feb 2026 |
+| 12 | Newsletter sign-up form with success message | [code ↗](./junior/fm-newsletter-signup-form-solution/) | [demo ↗](https://maadhav-codes.github.io/frontend-mentor-solutions/junior/fm-newsletter-signup-form-solution/) | 4 May 2025 | 6 May 2025 |
 
 ## 👤 Author
 
