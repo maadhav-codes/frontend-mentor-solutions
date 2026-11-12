@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="./assets/images/favicon-32x32.png"
+      type="image/png"
+    />
+    <title>Frontend Mentor | Fylo data storage component</title>
+
+    <!-- Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- Author -->
+    <meta name="author" content="https://github.com/maadhav-codes" />
+  </head>
+
+  <body>
+    <main class="container">
+      <section class="card-actions">
+        <h2 class="sr-only">Fylo File Management Actions</h2>
+
+        <img src="./assets/images/logo.svg" alt="Fylo logo" class="logo" />
+
+        <nav class="action-buttons">
+          <ul>
+            <li>
+              <button type="button" aria-label="Open document viewer">
+                <img
+                  src="./assets/images/icon-document.svg"
+                  alt=""
+                  aria-hidden="true"
+                />
+              </button>
+            </li>
+
+            <li>
+              <button type="button" aria-label="Open folder browser">
+                <img
+                  src="./assets/images/icon-folder.svg"
+                  alt=""
+                  aria-hidden="true"
+                />
+              </button>
+            </li>
+
+            <li>
+              <button type="button" aria-label="Upload file">
+                <img
+                  src="./assets/images/icon-upload.svg"
+                  alt=""
+                  aria-hidden="true"
+                />
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </section>
+
+      <section class="card-storage">
+        <h2 class="info">
+          You've used <strong>815 GB</strong> of your storage
+        </h2>
+
+        <div class="progress-bar-wrapper" role="progressbar">
+          <div class="progress-bar">
+            <div class="progress-bar-fill">
+              <span class="progress-bar-thumb" aria-hidden="true"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="storage-limits">
+          <span>0 GB</span>
+          <span>1000 GB</span>
+        </div>
+
+        <div class="popup" role="status" aria-live="polite">
+          <strong class="amount">185</strong>
+          <span class="unit">GB Left</span>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
