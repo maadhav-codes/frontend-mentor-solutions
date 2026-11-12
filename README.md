@@ -53,19 +53,19 @@ A curated collection of solutions to challenges from [Frontend Mentor](https://w
 | # | Project | Code | Live Demo | Created on | Completed on |
 | :-: | :-- | :-- | :-- | :-- | :-- |
 | 1 | Testimonials grid section | [code ↗](./junior/fm-testimonials-grid-section-solution/) | [demo ↗](https://maadhav-codes.github.io/frontend-mentor-solutions/junior/fm-testimonials-grid-section-solution/) | 30 April 2025 | 30 April 2025 |
-| 2 | Bento grid | [code ↗](./junior/fm-bento-grid-solution/) | [demo ↗](https://maadhav-codes.github.io/frontend-mentor-solutions/junior/fm-bento-grid-solution/) | 11 Feb 2026 | 12 Feb 2026 |
-| 3 | News homepage | [code ↗](./junior/fm-news-homepage-solution/) | [demo ↗](https://maadhav-codes.github.io/frontend-mentor-solutions/junior/fm-news-homepage-solution/) | 1 May 2025 | 1 May 2025 |
-| 4 | Intro section with dropdown navigation | [code ↗](./junior/fm-intro-section-with-dropdown-navigation-solution/) | [demo ↗](https://maadhav-codes.github.io/frontend-mentor-solutions/junior/fm-intro-section-with-dropdown-navigation-solution/) | 4 May 2025 | 4 May 2025 |
-| 5 | Contact form | [code ↗](./junior/fm-contact-form-solution/) | [demo ↗](https://maadhav-codes.github.io/frontend-mentor-solutions/junior/fm-contact-form-solution/) | 14 Feb 2026 | 16 Feb 2026 |
-| 6 | Tip calculator app | [code ↗](./junior/fm-tip-calculator-solution/) | [demo ↗](https://maadhav-codes.github.io/frontend-mentor-solutions/junior/fm-tip-calculator-solution/) | 12 May 2025 | 12 May 2025 |
-| 7 | Age calculator app | [code ↗](./junior/fm-age-calculator-solution/) | [demo ↗](https://maadhav-codes.github.io/frontend-mentor-solutions/junior/fm-age-calculator-solution/) | 6 May 2025 | 6 May 2025 |
+| 2 | News homepage | [code ↗](./junior/fm-news-homepage-solution/) | [demo ↗](https://maadhav-codes.github.io/frontend-mentor-solutions/junior/fm-news-homepage-solution/) | 1 May 2025 | 1 May 2025 |
+| 3 | Intro section with dropdown navigation | [code ↗](./junior/fm-intro-section-with-dropdown-navigation-solution/) | [demo ↗](https://maadhav-codes.github.io/frontend-mentor-solutions/junior/fm-intro-section-with-dropdown-navigation-solution/) | 4 May 2025 | 4 May 2025 |
+| 4 | Advice generator app | [code ↗](./junior/fm-advice-generator-solution/) | [demo ↗](https://maadhav-codes.github.io/frontend-mentor-solutions/junior/fm-advice-generator-solution/) | 4 May 2025 | 4 May 2025 |
+| 5 | Newsletter sign-up form with success message | [code ↗](./junior/fm-newsletter-signup-form-solution/) | [demo ↗](https://maadhav-codes.github.io/frontend-mentor-solutions/junior/fm-newsletter-signup-form-solution/) | 4 May 2025 | 6 May 2025 |
+| 6 | Age calculator app | [code ↗](./junior/fm-age-calculator-solution/) | [demo ↗](https://maadhav-codes.github.io/frontend-mentor-solutions/junior/fm-age-calculator-solution/) | 6 May 2025 | 6 May 2025 |
+| 7 | Tip calculator app | [code ↗](./junior/fm-tip-calculator-solution/) | [demo ↗](https://maadhav-codes.github.io/frontend-mentor-solutions/junior/fm-tip-calculator-solution/) | 12 May 2025 | 12 May 2025 |
 | 8 | Time tracking dashboard | [code ↗](./junior/fm-time-tracking-dashboard-solution/) | [demo ↗](https://maadhav-codes.github.io/frontend-mentor-solutions/junior/fm-time-tracking-dashboard-solution/) | 13 May 2025 | 14 May 2025 |
-| 9 | Advice generator app | [code ↗](./junior/fm-advice-generator-solution/) | [demo ↗](https://maadhav-codes.github.io/frontend-mentor-solutions/junior/fm-advice-generator-solution/) | 4 May 2025 | 4 May 2025 |
-| 10 | Conference ticket generator | [code ↗](./junior/fm-conference-ticket-generator-solution/) | [demo ↗](https://maadhav-codes.github.io/frontend-mentor-solutions/junior/fm-conference-ticket-generator-solution/) | 2 April 2026 | 15 April 2026 |
-| 11 | Pricing component with toggle | [code ↗](./junior/fm-pricing-component-with-toggle-solution/) | [demo ↗](https://maadhav-codes.github.io/frontend-mentor-solutions/junior/fm-pricing-component-with-toggle-solution/) | 16 Feb 2026 | 17 Feb 2026 |
-| 12 | Newsletter sign-up form with success message | [code ↗](./junior/fm-newsletter-signup-form-solution/) | [demo ↗](https://maadhav-codes.github.io/frontend-mentor-solutions/junior/fm-newsletter-signup-form-solution/) | 4 May 2025 | 6 May 2025 |
-| 13 | Fylo data storage component | [code ↗](./junior/fm-fylo-data-storage-component-solution/) | [demo ↗](https://maadhav-codes.github.io/frontend-mentor-solutions/junior/fm-fylo-data-storage-component-solution/) | 21 May 2025 | 21 May 2025 |
-| 14 | Clipboard landing page | [code ↗](./junior/fm-clipboard-landing-page-solution/) | [demo ↗](https://maadhav-codes.github.io/frontend-mentor-solutions/junior/fm-clipboard-landing-page-solution/) | 20 May 2025 | 20 May 2025 |
+| 9 | Clipboard landing page | [code ↗](./junior/fm-clipboard-landing-page-solution/) | [demo ↗](https://maadhav-codes.github.io/frontend-mentor-solutions/junior/fm-clipboard-landing-page-solution/) | 20 May 2025 | 20 May 2025 |
+| 10 | Fylo data storage component | [code ↗](./junior/fm-fylo-data-storage-component-solution/) | [demo ↗](https://maadhav-codes.github.io/frontend-mentor-solutions/junior/fm-fylo-data-storage-component-solution/) | 21 May 2025 | 21 May 2025 |
+| 11 | Bento grid | [code ↗](./junior/fm-bento-grid-solution/) | [demo ↗](https://maadhav-codes.github.io/frontend-mentor-solutions/junior/fm-bento-grid-solution/) | 11 Feb 2026 | 12 Feb 2026 |
+| 12 | Contact form | [code ↗](./junior/fm-contact-form-solution/) | [demo ↗](https://maadhav-codes.github.io/frontend-mentor-solutions/junior/fm-contact-form-solution/) | 14 Feb 2026 | 16 Feb 2026 |
+| 13 | Pricing component with toggle | [code ↗](./junior/fm-pricing-component-with-toggle-solution/) | [demo ↗](https://maadhav-codes.github.io/frontend-mentor-solutions/junior/fm-pricing-component-with-toggle-solution/) | 16 Feb 2026 | 17 Feb 2026 |
+| 14 | Conference ticket generator | [code ↗](./junior/fm-conference-ticket-generator-solution/) | [demo ↗](https://maadhav-codes.github.io/frontend-mentor-solutions/junior/fm-conference-ticket-generator-solution/) | 2 April 2026 | 15 April 2026 |
 
 ## 👤 Author
 
